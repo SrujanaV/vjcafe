@@ -25,10 +25,45 @@ myApp.config(function ($stateProvider, $urlRouterProvider, $httpProvider, $locat
             templateUrl: tempateURL,
             controller: 'HomeCtrl'
         })
-        .state('links', {
-            url: "/links",
+         .state('about', {
+            url: "/about",
             templateUrl: tempateURL,
-            controller: 'LinksCtrl'
+            controller: 'AboutCtrl'
+        })
+          .state('franchise', {
+            url: "/franchise",
+            templateUrl: tempateURL,
+            controller: 'FranchiseCtrl'
+        })
+            .state('gallery', {
+            url: "/gallery",
+            templateUrl: tempateURL,
+            controller: 'GalleryCtrl'
+        })
+            .state('serve', {
+            url: "/serve",
+            templateUrl: tempateURL,
+            controller: 'ServeCtrl'
+        })
+           .state('socialhub', {
+            url: "/socialhub",
+            templateUrl: tempateURL,
+            controller: 'SocialhubCtrl'
+        })
+          .state('storelocator', {
+            url: "/storelocator",
+            templateUrl: tempateURL,
+            controller: 'StorelocatorCtrl'
+        })
+        .state('form', {
+            url: "/form",
+            templateUrl: tempateURL,
+            controller: 'FormCtrl'
+        })
+        .state('grid', {
+            url: "/grid",
+            templateUrl: tempateURL,
+            controller: 'GridCtrl'
         });
     $urlRouterProvider.otherwise("/");
     $locationProvider.html5Mode(isproduction);

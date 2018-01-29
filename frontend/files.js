@@ -49,4 +49,11 @@ module.exports = [
   'frontend/js/controllers/controller.js',
   'frontend/js/controllers/header-controller.js',
   'frontend/js/controllers/language-controller.js',
+  'frontend/views/content/home/home.js',
+  'frontend/views/content/about/about.js',
+  'frontend/views/content/franchise/franchise.js',
+  'frontend/views/content/gallery/gallery.js',
+  'frontend/views/content/serve/serve.js',
+  'frontend/views/content/socialhub/socialhub.js',
+  'frontend/views/content/storelocator/storelocator.js',
 ];

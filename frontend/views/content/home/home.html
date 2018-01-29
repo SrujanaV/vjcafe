@@ -1,0 +1,172 @@
+<div class="">
+    <div class="">
+        <swiper autoplay="5000" effect="slide" slides-per-view="1" loop="true">
+            <slides>
+                <slide ng-repeat="s in mySlides">
+                    <img ng-src="{{s}}" class="img-full" noloading="true">
+                    <div class="banner-one">
+                        <div class="camera_caption">
+                            <div>
+                                <div class="text-center">
+                                    <h3 class="wow fadeInUp  p-color">Super Crispy</h3>
+                                    <h1 class="wow fadeInUp" data-wow-delay="0.2s">Super delicious cake</h1>
+                                    <p class="wow fadeInUp" data-wow-delay="0.4s">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed tincidunt</p>
+                                    <a href="shop.html" class="wow fadeInLeft  banner-button p-bg-color shop-button tran3s" data-wow-delay="0.6s">Shop Now</a>
+                                    <a href="portfolio-v1.html" class="wow fadeInRight  banner-button explore tran3s" data-wow-delay="0.6s">Explore now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </slide>
+            </slides>
+            <prev></prev>
+            <next></next>
+        </swiper>
+    </div>
+</div>
+
+<!-- 
+			=============================================
+				Timeline Cukape
+			============================================== 
+			-->
+<section>
+    <div class="jr-bg">
+        <div class="container">
+            <div class="row">
+                <div class="jr-title">
+                    <h1 class="text-up color-red margin0 font-revelution">alpha's</h1>
+                    <h1 class="text-up color-red margin0 font-revelution">journey</h1>
+                </div>
+                <div class="pt90">
+                    <!-- ngRepeat: data in journey |orderBy:'-date' |limitTo:3 -->
+                    <div class="col-md-4 ng-scope" ng-repeat="data in journey |orderBy:'-date' |limitTo:3" style="">
+                        <div class="j2">
+                            <div class="jr2-text display-inline">
+                                <h4 class="color-red year-r font-norica ng-binding">2016</h4>
+                                <div ng-bind-html="data.content" class="ng-binding">
+                                    <p>Diversified to manufacture Mulch Film</p>
+                                </div>
+                            </div>
+                            <!-- ngIf: data.journeyimage -->
+                            <div class="display-inline jr2-img ng-scope" ng-if="data.journeyimage"><img ng-src="http://alpha.tingdom.in/api/upload/readFile?file=593296788d9d03663f1d773f.jpg" class="img-responsive doneLoading"
+                                    src="http://alpha.tingdom.in/api/upload/readFile?file=593296788d9d03663f1d773f.jpg"></div>
+                            <!-- end ngIf: data.journeyimage -->
+                        </div>
+                    </div>
+                    <!-- end ngRepeat: data in journey |orderBy:'-date' |limitTo:3 -->
+                    <div class="col-md-4 ng-scope" ng-repeat="data in journey |orderBy:'-date' |limitTo:3">
+                        <div class="j2">
+                            <div class="jr2-text display-inline">
+                                <h4 class="color-red year-r font-norica ng-binding">2015</h4>
+                                <div ng-bind-html="data.content" class="ng-binding">
+                                    <p>Diversified to manufacture Collation Shrink Film</p>
+                                </div>
+                            </div>
+                            <!-- ngIf: data.journeyimage -->
+                            <div class="display-inline jr2-img ng-scope" ng-if="data.journeyimage"><img ng-src="http://alpha.tingdom.in/api/upload/readFile?file=5932965d8d9d03663f1d7729.jpg" class="img-responsive doneLoading"
+                                    src="http://alpha.tingdom.in/api/upload/readFile?file=5932965d8d9d03663f1d7729.jpg"></div>
+                            <!-- end ngIf: data.journeyimage -->
+                        </div>
+                    </div>
+                    <!-- end ngRepeat: data in journey |orderBy:'-date' |limitTo:3 -->
+                    <div class="col-md-4 ng-scope" ng-repeat="data in journey |orderBy:'-date' |limitTo:3">
+                        <div class="j2">
+                            <div class="jr2-text display-inline">
+                                <h4 class="color-red year-r font-norica ng-binding">2013</h4>
+                                <div ng-bind-html="data.content" class="ng-binding">
+                                    <p>Became India’s largest POF Shrink Film manufacturer (3,600 MT/year)</p>
+                                </div>
+                            </div>
+                            <!-- ngIf: data.journeyimage -->
+                            <div class="display-inline jr2-img ng-scope" ng-if="data.journeyimage"><img ng-src="http://alpha.tingdom.in/api/upload/readFile?file=5932964c8d9d03663f1d771e.jpg" class="img-responsive doneLoading"
+                                    src="http://alpha.tingdom.in/api/upload/readFile?file=5932964c8d9d03663f1d771e.jpg"></div>
+                            <!-- end ngIf: data.journeyimage -->
+                        </div>
+                    </div>
+                    <!-- end ngRepeat: data in journey |orderBy:'-date' |limitTo:3 -->
+                </div>
+            </div>
+            <div class="text-center over-fl mt-105"><button type="button" name="button" class="text-up btn-red font-roboto" ui-sref="journey" href="/journey">view journey</button></div>
+        </div>
+    </div>
+</section>
+<!-- /.timeline-section -->
+
+
+<!-- 
+			=============================================
+				Delicious Cukape
+			============================================== 
+			-->
+<div class="delicious-food-section">
+    <div class="container">
+        <div class="theme-section-title text-center">
+            <h2>Delicious Means Cukape</h2>
+            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed tincidunt ut laoreet <br> dolore magna aliquam
+                erat volutpat lorem</p>
+        </div>
+        <!-- /.theme-section-title -->
+        <div class="row">
+            <div class="col-sm-4 col-xs-12">
+                <div class="single-item">
+                    <img src="img/home/1.jpg" alt="">
+                    <h5><a href="#">Simple Crusty Bread</a></h5>
+                    <p>Lorem ipsum dolor amet, consetec <br>adipiscing elit. magna</p>
+                </div>
+            </div>
+            <!-- /.col- -->
+            <div class="col-sm-4 col-xs-12">
+                <div class="single-item">
+                    <img src="img/home/2.jpg" alt="">
+                    <h5><a href="#">Big Size Cream Cake</a></h5>
+                    <p>Lorem ipsum dolor amet, consetec <br>adipiscing elit. magna</p>
+                </div>
+            </div>
+            <!-- /.col- -->
+            <div class="col-sm-4 col-xs-12">
+                <div class="single-item">
+                    <img src="img/home/3.jpg" alt="">
+                    <h5><a href="#">Delicious Cupcake</a></h5>
+                    <p>Lorem ipsum dolor amet, consetec <br>adipiscing elit. magna</p>
+                </div>
+            </div>
+            <!-- /.col- -->
+        </div>
+        <!-- /.row -->
+    </div>
+    <!-- /.container -->
+    <div class="devider"></div>
+</div>
+<!-- /.delicious-food-section -->
+
+
+<div class="client-section">
+    <div class="opacity">
+        <div class="container">
+            <div class="theme-section-title text-center">
+                <h2>What People Say</h2>
+                <p>Lorem Ipsum proin gravida nibh vel velit auctor aliquetenean sollicitudin </p>
+            </div>
+            <!-- /.theme-section-title -->
+            <div class="row">
+                <swiper id="client-slider" autoplay="" effect="slide" slides-per-view="3" loop="true" slideToClickedSlide="true">
+                    <slides>
+                        <slide class="item" ng-repeat="s in mySlides1 track by $index">
+                            <div class="client-text">
+                                <i class="flaticon-left-quote icon tran3s"></i>
+                                <p>Negative feedback is better none. I would rather have a man hate me than overlook me. </p>
+                                <h6>Mahfuz Riad / <span>Germany</span></h6>
+                            </div>
+                            <!-- /.client-text -->
+                        </slide>
+                    </slides>
+                    <prev></prev>
+                    <next></next>
+                    <pagination></pagination>
+                </swiper>
+            </div>
+        </div>
+    </div>
+</div>
+</div>

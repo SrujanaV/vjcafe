@@ -1,4 +1,4 @@
-<header hide-on-scroll>
+<!--<header hide-on-scrol>
     <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
@@ -8,13 +8,52 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-                <a class="navbar-brand" ui-sref="home">
-                    <img src="img/logo.png" alt="logo" height="25">
-                </a>
+                <a class="navbar-brand" ui-sref="home"><img src="/img/logo.png" alt="logo" width="20"> </a>
             </div>
             <div class="collapse navbar-collapse" id="nav-collapse">
                 <div ng-include="template.menu" class="template menu"></div>
             </div>
         </div>
     </nav>
+</header>-->
+<header class="theme-menu-wrapper theme-main-menu-one" hide-on-scrol>
+    <div class="container-fluid">
+        <div class="header-wrapper">
+            <!-- ============================ Theme Menu ========================= -->
+            <nav class="theme-main-menu-wrapper navbar" id="mega-menu-wrapper">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1" aria-expanded="false">
+						       <span class="sr-only">Toggle navigation</span>
+						       <span class="icon-bar"></span>
+						       <span class="icon-bar"></span>
+						       <span class="icon-bar"></span>
+						     </button>
+                </div>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="navbar-collapse-1">
+                    <ul class="nav">
+                        <li class="dropdown-holder active"><a href="index.html" class="tran3s">Home</a></li>
+                        <li class="dropdown-holder"><a ui-sref="about" class="tran3s">About</a></li>
+                         <li class="dropdown-holder"><a  ui-sref="storelocator" class="tran3s">store locator</a></li>
+                        
+                           <li class="dropdown-holder"><a  ui-sref="gallery" class="tran3s">gallery</a></li>
+                        <li class="menu-inner-logo rythm pulse1">
+                            <a href="index.html" class="tran3s"><img src="http://html.unifytheme.com/cukape/images/logo/logo.png" alt=""></a>
+                        </li>
+                       <li class="dropdown-holder"><a ui-sref="franchise" class="tran3s">franchise</a></li>
+                        <li class="dropdown-holder"><a  ui-sref="serve" class="tran3s">What do we serve ?</a></li>
+                        <li><a  ui-sref="socialhub" class="tran3s">social hub</a></li>
+                    </ul>
+                </div>
+                <!-- /.navbar-collapse -->
+            </nav>
+            <!-- /.theme-main-menu-wrapper -->
+            <!--<div class="small-device-logo rythm pulse1">
+                <a href="index.html" class="tran3s"><img src="http://html.unifytheme.com/cukape/images/logo/logo.png" alt=""></a>
+            </div>-->
+        </div>
+        <!-- /.header-wrapper -->
+    </div>
+    <!-- /.container -->
 </header>
