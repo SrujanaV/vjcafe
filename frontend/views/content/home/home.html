@@ -1,33 +1,31 @@
-<div class="">
-    <div class="">
-        <swiper autoplay="5000" effect="slide" slides-per-view="1" loop="true">
-            <slides>
-                <slide ng-repeat="s in mySlides">
-                    <img ng-src="{{s}}" class="img-full" noloading="true">
-                    <div class="banner-one">
-                        <div class="camera_caption">
-                            <div>
-                                <div class="text-center">
-                                    <h3 class="wow fadeInUp  p-color">Super Crispy</h3>
-                                    <h1 class="wow fadeInUp" data-wow-delay="0.2s">Super delicious cake</h1>
-                                    <p class="wow fadeInUp" data-wow-delay="0.4s">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed tincidunt</p>
-                                    <a href="shop.html" class="wow fadeInLeft  banner-button p-bg-color shop-button tran3s" data-wow-delay="0.6s">Shop Now</a>
-                                    <a href="portfolio-v1.html" class="wow fadeInRight  banner-button explore tran3s" data-wow-delay="0.6s">Explore now</a>
-                                </div>
+<section class="">
+    <swiper autoplay="5000" effect="slide" slides-per-view="1" loop="true">
+        <slides>
+            <slide ng-repeat="s in mySlides">
+                <img ng-src="{{s}}" class="img-full" noloading="true">
+                <div class="banner-one">
+                    <div class="camera_caption">
+                        <div>
+                            <div class="text-center">
+                                <h3 class="wow fadeInUp  p-color">Super Crispy</h3>
+                                <h1 class="wow fadeInUp" data-wow-delay="0.2s">Super delicious cake</h1>
+                                <p class="wow fadeInUp" data-wow-delay="0.4s">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed tincidunt</p>
+                                <a href="shop.html" class="wow fadeInLeft  banner-button p-bg-color shop-button tran3s" data-wow-delay="0.6s">Shop Now</a>
+                                <a href="portfolio-v1.html" class="wow fadeInRight  banner-button explore tran3s" data-wow-delay="0.6s">Explore now</a>
                             </div>
                         </div>
                     </div>
-                </slide>
-            </slides>
-            <prev></prev>
-            <next></next>
-        </swiper>
-    </div>
-</div>
+                </div>
+            </slide>
+        </slides>
+        <prev></prev>
+        <next></next>
+    </swiper>
+</section>
 
 <!-- 
 			=============================================
-				Timeline Cukape
+				Timeline VJ Cafe
 			============================================== 
 			-->
 <section>
@@ -49,8 +47,8 @@
                                 </div>
                             </div>
                             <!-- ngIf: data.journeyimage -->
-                            <div class="display-inline jr2-img ng-scope"><img class="img-responsive"
-                                    src="img/home/timeline1.jpg"></div>
+                            <div class="display-inline jr2-img ng-scope"><img class="img-responsive" src="img/home/timeline1.jpg">
+                            </div>
                             <!-- end ngIf: data.journeyimage -->
                         </div>
                     </div>
@@ -64,8 +62,8 @@
                                 </div>
                             </div>
                             <!-- ngIf: data.journeyimage -->
-                            <div class="display-inline jr2-img ng-scope"><img class="img-responsive"
-                                    src="img/home/timeline2.jpg"></div>
+                            <div class="display-inline jr2-img ng-scope"><img class="img-responsive" src="img/home/timeline2.jpg">
+                            </div>
                             <!-- end ngIf: data.journeyimage -->
                         </div>
                     </div>
@@ -79,69 +77,23 @@
                                 </div>
                             </div>
                             <!-- ngIf: data.journeyimage -->
-                            <div class="display-inline jr2-img ng-scope"><img class="img-responsive"
-                                    src="img/home/timeline3.jpg"></div>
+                            <div class="display-inline jr2-img ng-scope"><img class="img-responsive" src="img/home/timeline3.jpg">
+                            </div>
                             <!-- end ngIf: data.journeyimage -->
                         </div>
                     </div>
                     <!-- end ngRepeat: data in journey |orderBy:'-date' |limitTo:3 -->
                 </div>
             </div>
-            <div class="text-center over-fl mt-105"><button type="button" name="button" class="text-up btn-red font-roboto" ui-sref="journey" href="/journey">view journey</button></div>
+            <div class="text-center over-fl mt-105"><button type="button" name="button" class="text-up btn-red font-roboto" ui-sref="journey" href="/journey">view journey</button>
+            </div>
         </div>
     </div>
 </section>
 <!-- /.timeline-section -->
 
 
-<!-- 
-			=============================================
-				Delicious Cukape
-			============================================== 
-			-->
-<div class="delicious-food-section">
-    <div class="container">
-        <div class="theme-section-title text-center">
-            <h2>Delicious Means Cukape</h2>
-            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed tincidunt ut laoreet <br> dolore magna aliquam
-                erat volutpat lorem</p>
-        </div>
-        <!-- /.theme-section-title -->
-        <div class="row">
-            <div class="col-sm-4 col-xs-12">
-                <div class="single-item">
-                    <img src="img/home/1.jpg" alt="">
-                    <h5><a href="#">Simple Crusty Bread</a></h5>
-                    <p>Lorem ipsum dolor amet, consetec <br>adipiscing elit. magna</p>
-                </div>
-            </div>
-            <!-- /.col- -->
-            <div class="col-sm-4 col-xs-12">
-                <div class="single-item">
-                    <img src="img/home/2.jpg" alt="">
-                    <h5><a href="#">Big Size Cream Cake</a></h5>
-                    <p>Lorem ipsum dolor amet, consetec <br>adipiscing elit. magna</p>
-                </div>
-            </div>
-            <!-- /.col- -->
-            <div class="col-sm-4 col-xs-12">
-                <div class="single-item">
-                    <img src="img/home/3.jpg" alt="">
-                    <h5><a href="#">Delicious Cupcake</a></h5>
-                    <p>Lorem ipsum dolor amet, consetec <br>adipiscing elit. magna</p>
-                </div>
-            </div>
-            <!-- /.col- -->
-        </div>
-        <!-- /.row -->
-    </div>
-    <!-- /.container -->
-    <div class="devider"></div>
-</div>
-<!-- /.delicious-food-section -->
-
-
-<div class="client-section">
+<section class="client-section">
     <div class="opacity">
         <div class="container">
             <div class="theme-section-title text-center">
@@ -168,5 +120,4 @@
             </div>
         </div>
     </div>
-</div>
-</div>
+</section>

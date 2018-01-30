@@ -6,7 +6,6 @@ $brand-warning: #ffec39 !default;
 $brand-danger: #fc483f !default;
 $brand-info: #000072 !default;
 @import "../../bower_components/bootstrap-sass/assets/stylesheets/bootstrap";
-
 /* Bootstrap Variables Goes Here */
 
 @import "other/font-fix";
@@ -17,18 +16,33 @@ body {
     color: rgba(0, 0, 0, 0.5);
     font-size: 16px;
 }
-a{
+
+a {
     display: inline-block;
 }
-h1, h2, h3, h4, h5, h6, p, ul {
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul {
     margin: 0;
     padding: 0;
 }
-h2, h3, h4, h5, h6 {
+
+h2,
+h3,
+h4,
+h5,
+h6 {
     color: #161616;
     font-family: 'Playfair Display', serif;
     /* font-weight: normal; */
 }
+
 img.loading {
     text-align: center;
     opacity: 1;
@@ -52,9 +66,11 @@ nav li:hover .dropdown-menu {
 #map img {
     opacity: 1;
 }
+
 .text-center {
     text-align: center;
 }
+
 a,
 .btn,
 [ui-sref] {
@@ -70,6 +86,7 @@ footer {
         margin: 0;
     }
 }
+
 //bootstrap forms
 .input-lg,
 .input-group-lg>.form-control,
@@ -135,3 +152,118 @@ header {
 .nav-up {
     transform: translateY(-100%);
 }
+
+//Timeline Css
+.jr-bg {
+    background: url(../img/home/bg-journey.jpg) no-repeat;
+    background-size: cover;
+    padding: 130px 0 50px;
+}
+
+.pt90 {
+    padding: 90px 0;
+}
+
+.color-red {
+    color: #e21e23;
+}
+
+.margin0,
+footer p {
+    margin: 0;
+}
+
+.careers-sec .list-cont h3,
+.form-sec .submit-sec .btn,
+.text-up {
+    text-transform: uppercase;
+}
+
+.jr-title {
+    h1 {
+        font-size: 36px;
+    }
+}
+
+.j2,
+.j3 {
+    min-height: 250px;
+}
+
+.j2,
+.j3 {
+    position: relative;
+}
+
+.j2 .jr2-text,
+.j3 .jr2-text {
+    width: 100px !important;
+    position: absolute;
+    left: -7px;
+    top: 61px;
+}
+
+.year-r {
+    font-weight: 700;
+    font-size: 36px;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.display-inline.jr2-img {
+    border: 1px solid #e21e23;
+    padding: 5px;
+    width: 225px;
+    height: auto;
+}
+
+.j2 .jr2-img,
+.j3 .jr2-img {
+    position: absolute;
+    right: 0;
+    top: 26px;
+}
+
+.al-list ul li,
+.display-inline {
+    display: inline-block;
+}
+
+.display-inline.jr2-img:before {
+    position: absolute;
+    top: 53%;
+    left: -41px;
+    width: 42px;
+    height: 2px;
+}
+
+.display-inline.jr2-img:after {
+    position: absolute;
+    top: 50%;
+    left: -42px;
+    width: 10px;
+    height: 10px;
+    border: 1px solid #e21e23;
+    border-radius: 100%;
+}
+
+.display-inline.jr2-img:after,
+.display-inline.jr2-img:before {
+    content: '';
+    background: #e21e23;
+}
+.mt-105 {
+    margin-top: 115px;
+}
+.over-fl{
+    overflow: hidden;
+}
+.btn-red {
+    background-color: #e21e23;
+    border: none;
+    color: #fff;
+    font-size: 20px;
+    padding: 7px 26px;
+    display: inline-block;
+}
+//end of timeline css

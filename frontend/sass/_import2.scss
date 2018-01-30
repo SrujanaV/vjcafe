@@ -10708,7 +10708,7 @@ header.theme-main-menu-one {
   color: #fff;
   padding: 22px 0 45px 0; }
 
-#theme-main-banner a.banner-button {
+a.banner-button {
   position: relative;
   width: 170px;
   text-transform: capitalize;
@@ -10718,11 +10718,11 @@ header.theme-main-menu-one {
   color: #fff;
   margin: 5px 8px; }
 
-#theme-main-banner a.banner-button.explore {
+a.banner-button.explore {
   border: 2px solid #fff; }
 
-#theme-main-banner a.banner-button:hover,
-#theme-main-banner a.banner-button.explore:hover {
+a.banner-button:hover,
+a.banner-button.explore:hover {
   background: #222328;
   border-color: #222328; }
 
@@ -11021,8 +11021,8 @@ header.theme-main-menu-one {
   padding-bottom: 20px; }
 
 .our-team.team-style-two .team-member .image {
-  width: 300px;
-  height: 300px;
+  width: 250px;
+  height: 250px;
   border-radius: 50%;
   margin: 0 auto; }
 
@@ -11046,7 +11046,7 @@ header.theme-main-menu-one {
 
 /*------------------------ Client Section ---------------------*/
 .client-section {
-  background: url(../images/home/banner2.jpg) no-repeat center;
+  background: url(../img/banner.jpg) no-repeat center;
   background-attachment: fixed;
   background-size: cover;
   margin-bottom: 160px; }
@@ -11143,7 +11143,7 @@ header.theme-main-menu-one {
 /*------------------------ Footer --------------------*/
 .theme-main-footer {
   background: #181818;
-  padding-top: 100px; }
+  padding-top: 30px; }
 
 .theme-main-footer p, .theme-main-footer a {
   font-family: 'Open Sans', sans-serif;
@@ -11200,8 +11200,8 @@ header.theme-main-menu-one {
   margin-right: 15px;
   color: #6b6b6b; }
 
-.top-footer-widget [class*="col-"] {
-  margin-bottom: 50px; }
+// .top-footer-widget [class*="col-"] {
+//   margin-bottom: 50px; }
 
 .theme-main-footer .bottom-footer {
   border-top: 1px solid rgba(36, 36, 36, 0.7);
@@ -11219,7 +11219,7 @@ header.theme-main-menu-one {
 
 /*-------------------- Theme Inner Banner  ------------------*/
 .theme-inner-banner {
-  background: url(../images/inner-page/banner.jpg) no-repeat center;
+  background: url(../img/banner.jpg) no-repeat center;
   background-size: cover;
   background-attachment: fixed;
   position: relative;
