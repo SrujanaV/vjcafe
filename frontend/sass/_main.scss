@@ -252,12 +252,15 @@ footer p {
     content: '';
     background: #e21e23;
 }
+
 .mt-105 {
     margin-top: 115px;
 }
-.over-fl{
+
+.over-fl {
     overflow: hidden;
 }
+
 .btn-red {
     background-color: #e21e23;
     border: none;
@@ -266,4 +269,50 @@ footer p {
     padding: 7px 26px;
     display: inline-block;
 }
+.btn-red:hover{
+    color: black;
+}
+
+.flaticon-left-quote:before {
+    content: "\f10b";
+}
+
+.client-text {
+    margin: 0 8px;
+}
+
 //end of timeline css
+
+//scss for swiper
+.gallery-bg {
+    .swiper-container1 {
+        width: 100%;
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+    .swiper-slide {
+        background-position: center;
+        background-size: cover;
+        width: 500px!important;
+        height: 350px;
+        border: 2px solid white;
+    }
+    .swiper-pagination-bullets {
+        display: none;
+    }
+    .swiper-button-prev {
+        background: url("../img/home/previous-home.png");
+        width: 60px;
+        height: 60px
+    }
+    .swiper-button-next {
+        background: url("../img/home/next-home.png");
+        width: 60px;
+        height: 60px
+   
+    }
+   .swiper-button-next, .swiper-container-rtl .swiper-button-prev,
+    .swiper-button-prev, .swiper-container-rtl .swiper-button-next{
+        display: block !important;
+    }
+ }

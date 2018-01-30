@@ -33,51 +33,21 @@
         <div class="container">
             <div class="row">
                 <div class="jr-title">
-                    <h1 class="text-up color-red margin0 font-revelution">alpha's</h1>
+                    <h1 class="text-up color-red margin0 font-revelution">vj cafe's</h1>
                     <h1 class="text-up color-red margin0 font-revelution">journey</h1>
                 </div>
                 <div class="pt90">
                     <!-- ngRepeat: data in journey |orderBy:'-date' |limitTo:3 -->
-                    <div class="col-md-4 ng-scope">
+                    <div class="col-md-4 ng-scope" ng-repeat="journey in timeline">
                         <div class="j2">
                             <div class="jr2-text display-inline">
-                                <h4 class="color-red year-r font-norica ng-binding">2016</h4>
+                                <h4 class="color-red year-r font-norica ng-binding">{{journey.year}}</h4>
                                 <div>
-                                    <p>Diversified to manufacture Mulch Film</p>
+                                    <p>{{journey.description}}</p>
                                 </div>
                             </div>
                             <!-- ngIf: data.journeyimage -->
-                            <div class="display-inline jr2-img ng-scope"><img class="img-responsive" src="img/home/timeline1.jpg">
-                            </div>
-                            <!-- end ngIf: data.journeyimage -->
-                        </div>
-                    </div>
-                    <!-- end ngRepeat: data in journey |orderBy:'-date' |limitTo:3 -->
-                    <div class="col-md-4 ng-scope">
-                        <div class="j2">
-                            <div class="jr2-text display-inline">
-                                <h4 class="color-red year-r font-norica ng-binding">2015</h4>
-                                <div>
-                                    <p>Diversified to manufacture Collation Shrink Film</p>
-                                </div>
-                            </div>
-                            <!-- ngIf: data.journeyimage -->
-                            <div class="display-inline jr2-img ng-scope"><img class="img-responsive" src="img/home/timeline2.jpg">
-                            </div>
-                            <!-- end ngIf: data.journeyimage -->
-                        </div>
-                    </div>
-                    <!-- end ngRepeat: data in journey |orderBy:'-date' |limitTo:3 -->
-                    <div class="col-md-4 ng-scope">
-                        <div class="j2">
-                            <div class="jr2-text display-inline">
-                                <h4 class="color-red year-r font-norica ng-binding">2013</h4>
-                                <div>
-                                    <p>Became India’s largest POF Shrink Film manufacturer (3,600 MT/year)</p>
-                                </div>
-                            </div>
-                            <!-- ngIf: data.journeyimage -->
-                            <div class="display-inline jr2-img ng-scope"><img class="img-responsive" src="img/home/timeline3.jpg">
+                            <div class="display-inline jr2-img ng-scope"><img class="img-responsive" src="img/home/{{journey.img}}">
                             </div>
                             <!-- end ngIf: data.journeyimage -->
                         </div>
@@ -97,18 +67,18 @@
     <div class="opacity">
         <div class="container">
             <div class="theme-section-title text-center">
-                <h2>What People Say</h2>
+                <h2>Testimonials</h2>
                 <p>Lorem Ipsum proin gravida nibh vel velit auctor aliquetenean sollicitudin </p>
             </div>
             <!-- /.theme-section-title -->
             <div class="row">
-                <swiper id="client-slider" autoplay="" effect="slide" slides-per-view="3" loop="true" slideToClickedSlide="true">
+                <swiper id="client-slider" autoplay="true" effect="slide" slides-per-view="3" speed="20000" slidesPerGroup="3">
                     <slides>
-                        <slide class="item" ng-repeat="s in mySlides1 track by $index">
+                        <slide class="item" ng-repeat="testimonial in testimonials track by $index">
                             <div class="client-text">
-                                <i class="flaticon-left-quote icon tran3s"></i>
-                                <p>Negative feedback is better none. I would rather have a man hate me than overlook me. </p>
-                                <h6>Mahfuz Riad / <span>Germany</span></h6>
+                                <i class="fa fa-quote-left fa-4x icon" aria-hidden="true"></i>
+                                <p>{{testimonial.content}}</p>
+                                <h6>{{testimonial.name}} / <span>{{testimonial.country}}</span></h6>
                             </div>
                             <!-- /.client-text -->
                         </slide>
@@ -121,3 +91,27 @@
         </div>
     </div>
 </section>
+
+<section>
+    <div class="gallery-bg">
+        <div class="container">
+            <div class="row">
+                <div class="theme-section-title text-center">
+                    <h2>gallery</h2>
+                    <p>Lorem Ipsum proin gravida nibh vel velit auctor aliquetenean sollicitudin </p>
+                </div>
+                <div class="home-slider">
+                    <div class="swiper-container1">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide" style="background-image:url({{s}})" ng-repeat="s in homeSlide track by $index"></div>
+                        </div>
+                        <div class="swiper-button-prev hidden-sm hidden-xs"></div>
+                        <div class="swiper-button-next hidden-sm hidden-xs"></div>
+                        <!-- Add Pagination -->
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+ </section> 
