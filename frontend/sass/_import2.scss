@@ -2697,7 +2697,7 @@ display: none;}
   transition: .3s;
   -webkit-transform: translateZ(0);
   transform: translateZ(0);
-  z-index: 10; }
+  z-index: 15; }
 
 .swiper-pagination.swiper-pagination-hidden {
   opacity: 0; }
@@ -2709,7 +2709,8 @@ display: none;}
   border-radius:0;
   display: inline-block;
   opacity: 1;
-background: transparent; }
+background: transparent; 
+z-index: 20; }
 
 .swiper-pagination-clickable .swiper-pagination-bullet {
   cursor: pointer; }
@@ -4147,8 +4148,8 @@ html {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%; }
 
-body {
-  margin: 0; }
+// body {
+//   margin: 0; }
 
 article,
 aside,
@@ -5187,12 +5188,12 @@ html {
   font-size: 10px;
   -webkit-tap-highlight-color: transparent; }
 
-body {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 14px;
-  line-height: 1.428571429;
-  color: #333333;
-  background-color: #fff; }
+// body {
+//   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+//   font-size: 14px;
+//   line-height: 1.428571429;
+//   color: #333333;
+//   background-color: #fff; }
 
 input,
 button,
@@ -10051,7 +10052,7 @@ header.theme-main-menu-one {
 .p-color,
 #mega-menu-wrapper .nav > li.active a,
 #mega-menu-wrapper .nav > li:hover a,
-.delicious-food-section .single-item h5 a,
+.single-item h5 a,
 .short-banner .opacity .theme-button,
 .our-team .team-member h5,
 .our-team .team-member .image .opacity ul li a:hover,
@@ -10231,12 +10232,12 @@ header.theme-main-menu-one {
   src: url("../fonts/font-awesome/fonts/fontawesome-webfont.eot"), url("../fonts/font-awesome/fonts/fontawesome-webfont.woff2") format("woff2"), url("../fonts/font-awesome/fonts/fontawesome-webfont.woff") format("woff"), url("../fonts/font-awesome/fonts/fontawesome-webfont.svg") format("svg");
   /* Legacy iOS */ }
 
-body {
+// body {
   /*   font-family: 'Grand Hotel', cursive;   */
-  font-family: 'Open Sans', sans-serif;
-  font-weight: normal;
-  color: rgba(0, 0, 0, 0.5);
-  font-size: 16px; }
+  // font-family: 'Open Sans', sans-serif;
+  // font-weight: normal;
+  // color: rgba(0, 0, 0, 0.5);
+  // font-size: 16px; }
 
 body .main-page-wrapper {
   overflow-x: hidden; }
@@ -10321,14 +10322,6 @@ input, textarea {
 .p0 {
   padding: 0 !important; }
 
-/*--------------------- Transition --------------------*/
-.tran3s, .theme-button, .theme-main-menu-one #mega-menu-wrapper .nav > li:before, .theme-button span:before, .owl-theme .owl-dots .owl-dot span,
-.related-product .owl-theme .owl-nav [class*=owl-], .aside-menu-wrapper ul .dropdown-holder .sub-menu li a {
-  transition: all .3s ease-in-out; }
-
-.tran4s, .delicious-food-section .single-item img {
-  transition: all .4s ease-in-out; }
-
 /*---------------------- Theme Title ---------------------*/
 .theme-section-title {
   position: relative; }
@@ -10382,17 +10375,6 @@ input, textarea {
 .contact-us .contact-address ul li a:hover, .popular-faq .faq-panel .panel-group .panel-heading.active-panel a:before,
 .aside-menu-wrapper .main-nav-wrapper li:hover > a, .blog-details-content .comment-box .single-comment .comment .reply:hover {
   color: #daac5b; }
-
-.p-bg-color, .scroll-top, #mega-menu-wrapper .nav > li.dropdown-holder .sub-menu li:hover > a, .theme-section-title a:hover, #client-slider .owl-dots .owl-dot.active span,
-#client-slider .owl-dots .owl-dot:hover span, .our-blog .single-blog-grid .post .read-more:hover, .pricing-plan .plan-figure:hover .theme-button, .sidebar-keyword ul li a:hover,
-.form-styl-one input[type="submit"]:hover, .related-product .owl-theme .owl-nav [class*=owl-]:hover {
-  background: #daac5b; }
-
-#theme-main-banner a.banner-button.shop-button, .short-banner .opacity .theme-button, #client-slider .owl-dots .owl-dot.active span,
-#client-slider .owl-dots .owl-dot:hover span, .our-blog .single-blog-grid .post .read-more:hover, .sidebar-keyword ul li a:hover,
-.related-product .owl-theme .owl-nav [class*=owl-]:hover, .contact-us .contact-address ul li a:hover {
-  border-style: solid;
-  border-color: #daac5b; }
 
 #player {
   position: fixed;
@@ -10744,36 +10726,6 @@ a.banner-button.explore:hover {
   font-weight: normal;
   line-height: 90px; }
 
-/*----------------------------- Delicious Cukape --------------------------*/
-.delicious-food-section.fix-top-margin {
-  padding-top: 135px; }
-
-.delicious-food-section .theme-section-title {
-  margin-bottom: 50px; }
-
-.delicious-food-section .single-item {
-  text-align: center;
-  margin-bottom: 50px; }
-
-.delicious-food-section .single-item img {
-  margin: 0 auto; }
-
-.delicious-food-section .single-item:hover img {
-  -webkit-transform: scale3D(1.1, 1.1, 1);
-  transform: scale3D(1.1, 1.1, 1); }
-
-.delicious-food-section .single-item h5 a {
-  margin: 15px 0 20px 0; }
-
-.delicious-food-section .devider {
-  height: 1px;
-  width: 95%;
-  margin: 0 auto;
-  background: rgba(0, 0, 0, 0.08); }
-
-.delicious-food-section .row {
-  margin-bottom: 115px; }
-
 /*-------------------------- Our Populer Item/Our Portfolio -------------------*/
 .our-portfolio .theme-section-title {
   margin: 100px 0; }
@@ -11079,18 +11031,6 @@ a.banner-button.explore:hover {
 .client-section .client-text h6 span {
   font-family: 'Open Sans', sans-serif;
   color: rgba(0, 0, 0, 0.5); }
-
-#client-slider .owl-dots .owl-dot span {
-  background: transparent;
-  border: 1px solid #fff;
-  border-radius: 0;
-  margin: 0 4px; }
-
-#client-slider .owl-dots {
-  margin-top: 75px; }
-
-.owl-theme .owl-nav {
-  margin: 0; }
 
 /*---------------------- Our Blog ------------------*/
 .our-blog.home-blog {
@@ -11914,29 +11854,6 @@ a.banner-button.explore:hover {
 
 .related-product-slider .item {
   margin: 0 15px; }
-
-.related-product .owl-theme .owl-nav [class*=owl-] {
-  font-family: 'font-awesome';
-  width: 30px;
-  height: 30px;
-  text-align: center;
-  padding: 0;
-  border: 2px solid rgba(0, 0, 0, 0.08);
-  line-height: 26px;
-  color: rgba(0, 0, 0, 0.4);
-  font-size: 18px;
-  background: transparent; }
-
-.owl-theme .owl-nav {
-  margin: 0; }
-
-.related-product .owl-theme .owl-nav [class*=owl-]:hover {
-  color: #fff; }
-
-.related-product .owl-theme .owl-controls {
-  position: absolute;
-  top: -60px;
-  right: 15px; }
 
 /*------------------------ Conatct US -------------------------*/
 .contact-us-form {
