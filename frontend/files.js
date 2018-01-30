@@ -21,7 +21,7 @@ module.exports = [
   'bower_components/angulartics/dist/angulartics.min.js',
   'bower_components/angulartics-google-analytics/dist/angulartics-ga.min.js',
   'bower_components/angular-ui-swiper/dist/angular-ui-swiper.js',
-  'bower_components/swiper/dist/js/swiper.js'
+  'bower_components/swiper/dist/js/swiper.js',
   "bower_components/angular-toastr/dist/angular-toastr.js",
   "bower_components/angular-toastr/dist/angular-toastr.tpls.js",
   "bower_components/angular-promise-buttons/dist/angular-promise-buttons.js",
@@ -57,5 +57,5 @@ module.exports = [
   'frontend/views/content/gallery/gallery.js',
   'frontend/views/content/serve/serve.js',
   'frontend/views/content/socialhub/socialhub.js',
-  'frontend/views/content/storelocator/storelocator.js',
+  'frontend/views/content/storelocator/storelocator.js'
 ];
