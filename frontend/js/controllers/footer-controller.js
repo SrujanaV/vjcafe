@@ -1,11 +1,11 @@
-myApp.controller('headerCtrl', function ($scope, TemplateService) {
+myApp.controller('footerCtrl', function ($scope, TemplateService) {
     $scope.template = TemplateService;
     $scope.$on('$stateChangeSuccess', function (event, toState, toParams, fromState, fromParams) {
         $(window).scrollTop(0);
     });
-    // $.fancybox.close(true);
-     $scope.scrollTop = function()
+       $scope.scrollTop = function()
     {
+        console.log("sssssssssssss",)
          $('html, body').animate({
         scrollTop: $('body,html').offset().top -100 
     }, 3000);
