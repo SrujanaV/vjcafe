@@ -1,5 +1,5 @@
 var mySwiper;
-myApp.controller('HomeCtrl', function ($scope, TemplateService, NavigationService, $timeout,Swiper) {
+myApp.controller('HomeCtrl', function ($scope, TemplateService, NavigationService, $timeout) {
     $scope.template = TemplateService.getHTML("content/home/home.html");
     TemplateService.title = "Home"; //This is the Title of the Website
     $scope.navigation = NavigationService.getNavigation();
@@ -50,8 +50,6 @@ myApp.controller('HomeCtrl', function ($scope, TemplateService, NavigationServic
             },
         });
     }, 300);
-
-
 
     $scope.homeSlide = [
         'http://flexslider.woothemes.com/images/kitchen_adventurer_cheesecake_brownie.jpg',
