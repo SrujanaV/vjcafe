@@ -10156,7 +10156,8 @@ header.theme-main-menu-one {
   color: #6b6b6b; }
 
 .top-footer-widget [class*="col-"] {
-  margin-bottom: 50px; }
+  // margin-bottom: 50px;
+   }
 
 .theme-main-footer .bottom-footer {
   border-top: 1px solid rgba(36, 36, 36, 0.7);
@@ -10211,6 +10212,7 @@ header.theme-main-menu-one {
   z-index: 99;
   text-align: center;
   color: #fff;
+  background:#daac5b;
   font-size: 20px;
   display: none; }
 
@@ -10874,11 +10876,12 @@ a.banner-button.explore:hover {
   font-size: 18px;
   line-height: 32px;
   display: block;
-  margin: 30px 0 40px 0; }
+  margin: 30px 0 40px 0;
+   }
 
 /*------------------ Short Banner ------------------*/
 .short-banner {
-  background: url(../images/home/banner.jpg) no-repeat center;
+  background: url(../img/banner.jpg) no-repeat center;
   background-size: cover;
   background-attachment: fixed; }
 
@@ -11099,6 +11102,7 @@ a.banner-button.explore:hover {
   margin: 20px 0 38px 0; }
 
 .top-footer-widget .footer-list-widget ul li a {
+  
   margin-bottom: 15px; }
 
 .top-footer-widget .insta-feed ul {
@@ -11162,7 +11166,7 @@ a.banner-button.explore:hover {
   background-size: cover;
   background-attachment: fixed;
   position: relative;
-  // margin-bottom: 180px; 
+  // margin-bottom: 180spx; 
 }
 
 .theme-inner-banner .opacity {
@@ -12063,7 +12067,8 @@ a.banner-button.explore:hover {
   margin-top: 50px; }
 
 .banner-one {
-  position: absolute; }
+  position: absolute; 
+    z-index:10;}
 
 .banner-one h3 {
   font-family: 'Grand Hotel', cursive;

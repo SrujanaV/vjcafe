@@ -56,6 +56,6 @@ module.exports = [
   'frontend/views/content/franchise/franchise.js',
   'frontend/views/content/gallery/gallery.js',
   'frontend/views/content/serve/serve.js',
-  'frontend/views/content/socialhub/socialhub.js',
+  'frontend/views/content/blog/blog.js',
   'frontend/views/content/storelocator/storelocator.js'
 ];

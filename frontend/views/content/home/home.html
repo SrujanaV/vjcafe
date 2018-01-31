@@ -1,7 +1,8 @@
-<section class="">
+<section>
     <swiper autoplay="5000" effect="slide" slides-per-view="1" loop="true">
         <slides>
             <slide ng-repeat="s in mySlides">
+                <div class="home-opacity"> </div>
                 <img ng-src="{{s}}" class="img-full" noloading="true">
                 <div class="banner-one">
                     <div class="camera_caption">
@@ -22,17 +23,16 @@
         <next></next>
     </swiper>
 </section>
-
 <!-- 
 			=============================================
 				Timeline VJ Cafe
 			============================================== 
 			-->
 <section>
-    <div class="jr-bg">
+    <div class="gallery-bg">
         <div class="container">
             <div class="row">
-                <div class="jr-title">
+                <div class="jr-title text-center">
                     <h1 class="text-up color-red margin0 font-revelution">vj cafe's</h1>
                     <h1 class="text-up color-red margin0 font-revelution">journey</h1>
                 </div>
@@ -55,14 +55,10 @@
                     <!-- end ngRepeat: data in journey |orderBy:'-date' |limitTo:3 -->
                 </div>
             </div>
-            <div class="text-center over-fl mt-105"><button type="button" name="button" class="text-up btn-red font-roboto" ui-sref="journey" href="/journey">view journey</button>
-            </div>
         </div>
     </div>
 </section>
 <!-- /.timeline-section -->
-
-
 <section class="client-section">
     <div class="opacity">
         <div class="container">
@@ -91,7 +87,6 @@
         </div>
     </div>
 </section>
-
 <section>
     <div class="gallery-bg">
         <div class="container">
@@ -114,4 +109,30 @@
             </div>
         </div>
     </div>
- </section> 
+</section>
+<section class="client-section">
+    <div class="opacity">
+        <div class="container">
+            <div class="theme-section-title text-center">
+                <h2>social hub</h2>
+            </div>
+            <!-- /.theme-section-title -->
+            <div class="row">
+                <div class="col-md-6 col-sm-6 col-xs-12">
+                    <div class="small-socialicon">
+                        <i class="fa fa-facebook-square" aria-hidden="true" href=""></i>
+                    </div>
+                    <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FTheVJCafe%2F&tabs=timeline&width=340&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId"
+                        width="340" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+                </div>
+                <div class="col-md-6 col-sm-6 col-xs-12">
+                    <div class="small-socialicon">
+                        <i class="fa fa-instagram" aria-hidden="true" href=""></i>
+                    </div>
+                    <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FTheVJCafe%2F&tabs=timeline&width=340&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId"
+                        width="340" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

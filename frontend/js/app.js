@@ -45,10 +45,10 @@ myApp.config(function ($stateProvider, $urlRouterProvider, $httpProvider, $locat
             templateUrl: tempateURL,
             controller: 'ServeCtrl'
         })
-           .state('socialhub', {
-            url: "/socialhub",
+           .state('blog', {
+            url: "/blog",
             templateUrl: tempateURL,
-            controller: 'SocialhubCtrl'
+            controller: 'BlogCtrl'
         })
           .state('storelocator', {
             url: "/storelocator",
