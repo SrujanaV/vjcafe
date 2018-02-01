@@ -469,8 +469,7 @@
 <div class="flex-item-container row-margin">
     <div class="map-section">
         <div class="map-place" id="map">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3770.0740323721925!2d72.83370035010358!3d19.104407887008154!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c9c763eb64a5%3A0x5bfa469d7cd1ae79!2sThe+VJ+Caf%C3%A9!5e0!3m2!1sen!2sin!4v1517391845826"
-                width="400" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d45205.48201635978!2d72.82667811339341!3d19.047026924346575!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c8d20349da67%3A0x86b4fa1681bb01e9!2sShashi+Karkhanis+And+Associates!5e0!3m2!1sen!2sin!4v1517470606519" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
         </div>
     </div>
     <div class="custom-slider">
@@ -480,30 +479,32 @@
                     <div class="location-title text-center">
                         <div class="btn-group" uib-dropdown>
                             <button id="single-button" type="button" class="btn location--btn" uib-dropdown-toggle ng-disabled="disabled">
-        hujj <span><img width="15" height="15" src="img/home/1.jpg"></span>
+                                {{locationButton}} <span><i class="fa fa-angle-down"></i></span>
       </button>
                             <ul class="location-dropdown location-dropdown-menu dropdown-menu" uib-dropdown-menu role="menu" aria-labelledby="single-button">
-                                <li role="menuitem" ng-click="changePlaces(place)" value="Mumbai"><a href="#">Mumbai</a></li>
+                                <li role="menuitem" ng-click="changePlaces(location)" value="{{location.name}}" ng-repeat="location in locations"><a href="#">{{location.name}}</a></li>
                             </ul>
                         </div>
                         <div class="location-name">
-                            <h3 class="tab-title text-uppercase marg0">Hello</h3>
+                            <h3 class="tab-title text-uppercase marg0">{{locationButton}}</h3>
                         </div>
                     </div>
-
-                    <flexslider class="section-padd" prev-text="" next-text=""
-                        animation="slide" item-width="300" item-margin="20" min-items="2" flexslider>
+                    <flexslider class="section-padd" prev-text="" next-text="" animation="slide" item-width="300" item-margin="20" min-items="2" flexslider>
+                        <pre>{{location}}</pre>
                         <li class="flex-li">
                             <div class="row">
                                 <div class="store-location-dtl">
                                     <div class="store-location-brands-dtl">
-                                        <!-- <img src="img/home/1.jpg" alt="Brand Logo" class="img-responsive"> -->
-                                        <p class="name"><b>3424</b></p>
+                                        <img src="img/logo.png" alt="Brand Logo" class="img-responsive">
+                                        <!-- <p class="name"><b>3424</b></p> -->
                                     </div>
                                     <div class="store-location-addrs-dtl">
-                                        <address class="address"><b>check</b></address>
-                                        <p class="contact-no"><b>3424</b></p>
-                                        <p class="email"><b>email</b></p>
+                                        <address class="address"><b>Shop 2, Ground Floor,
+                                            <br>Opposite Bhaidas Auditorium, 
+                                            <br> JVPD Lane,Vile Parle West, 
+                                            <br>Mumbai</b></address>
+                                        <p class="contact-no"><b><i class="fa fa-phone"> 022 69999074</i></b></p>
+                                        <!-- <p class="email"><b>{{location.name}}</b></p> -->
                                     </div>
                                 </div>
                             </div>

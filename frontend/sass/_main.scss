@@ -5,6 +5,7 @@ $brand-success: #84ce3c !default;
 $brand-warning: #ffec39 !default;
 $brand-danger: #fc483f !default;
 $brand-info: #000072 !default;
+$brand-orange:#ee7a2f;
 @import "../../bower_components/bootstrap-sass/assets/stylesheets/bootstrap";
 /* Bootstrap Variables Goes Here */
 
@@ -82,7 +83,7 @@ a,
 footer {
     font-size: 12px;
     background-color: #eee;
-    padding: 10px 0;
+    padding: 0;
     p {
         margin: 0;
     }
@@ -162,11 +163,11 @@ header {
 }
 
 .pt90 {
-    padding: 90px 0;
+    padding: 10px 0;
 }
 
-.color-red {
-    color: #e21e23;
+.color-orange {
+    color:$brand-orange;
 }
 
 .margin0,
@@ -198,10 +199,10 @@ footer p {
 
 .j2 .jr2-text,
 .j3 .jr2-text {
-    width: 100px !important;
+    width: 150px !important;
     position: absolute;
     left: -7px;
-    top: 61px;
+    top: 30px;
 }
 
 .year-r {
@@ -214,7 +215,7 @@ footer p {
 .display-inline.jr2-img {
     border: 1px solid #e21e23;
     padding: 5px;
-    width: 225px;
+    width: 200px;
     height: auto;
 }
 
@@ -289,9 +290,9 @@ footer p {
     font-size: 40px;
     color: #daac5b;
     padding: 0 0 20px 0;
- }
- 
- .home-opacity {
+}
+
+.home-opacity {
     position: absolute;
     background: rgba(0, 0, 0, 0.8);
     top: 0;
@@ -299,7 +300,8 @@ footer p {
     right: 0;
     bottom: 0;
     z-index: 9;
- }
+}
+
 .gallery-bg {
     margin: 100px 0 80px 0;
     .swiper-container1 {
@@ -418,6 +420,8 @@ footer p {
             span {
                 position: absolute;
                 right: 0;
+                bottom: 0;
+                font-size: 20px;
             }
             &:focus {
                 background-color: #341314 !important;
@@ -425,8 +429,7 @@ footer p {
             }
         }
         .location-dropdown {
-            min-width: 200px;
-            // @extend .dropdown-hidden-anim;
+            min-width: 200px; // @extend .dropdown-hidden-anim;
         }
         .open .location-dropdown {
             // @extend .dropdown-visible-anim;
@@ -476,22 +479,26 @@ footer p {
     @include padding(15px);
     color: white;
 }
-.flex-li{
+
+.flex-li {
     list-style-type: none;
 }
+
 .store-location-brands-dtl {
     @include size(200px,
     85px);
     @include padding(15px);
     margin-top: 15px;
     margin-bottom: 15px;
-    background: white;
+    background: transparent;
     overflow: hidden;
     img {
-        width: 120px !important;
+        height: 100%;
+        // width: 120px !important;
         margin: 0 auto;
     }
 }
+
 .section-padd {
     padding: 15px;
 }
@@ -506,10 +513,18 @@ footer p {
     }
 }
 
-.footer-list-widget .social-name{
+.display-line{
+    display: inline-block;
+ }
+ .quick-link{
+    vertical-align: top;
+    padding: 0 0px 0 70px;
+ }
+
+.footer-list-widget .social-name {
     font-size: 16px;
-    color: white;
-    padding: 0 9px;
+    color: rgba(255, 255, 255, 0.6);    ;
+    padding: 0 8px;
 }
 
 //scss for franchise
@@ -525,11 +540,15 @@ footer p {
 
 .franchise-section-title p {
     line-height: 32px;
-    font-size: 18px;
+    font-size: 16px;
     margin-top: 20px;
     font-weight: 300;
 }
-
+.franchise-list{
+    list-style-type: disc;
+    font-weight: 300;
+    margin-left: 20px;
+ }
 .franchise-form {
     color: white;
     h3 {
