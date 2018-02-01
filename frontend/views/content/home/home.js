@@ -66,16 +66,16 @@ myApp.controller('HomeCtrl', function ($scope, TemplateService, NavigationServic
         'http://flexslider.woothemes.com/images/kitchen_adventurer_caramel.jpg',
     ]
 $scope.timeline = [{
-        "year": "2016",
-        "description": "Diversified to manufacture Collation Shrink Film",
+        "year": "2015",
+        "description": "The VJ Cafe was founded. ",
         "img": "timeline1.jpg"
     }, {
-        "year": "2017",
-        "description": "Diversify to manufacture Collation Shrink Film",
+        "year": "2016",
+        "description": "opened an outlet at linking road, bandra",
         "img": "timeline2.jpg"
     }, {
-        "year": "2018",
-        "description": "Diversified to manufacturing Collation Shrink Film",
+        "year": "2017",
+        "description": "opening of another outlet at king's circle, matunga . Also, VJ Cafe got into franchising.",
         "img": "timeline3.jpg"
     }];
     $scope.testimonials=[{
