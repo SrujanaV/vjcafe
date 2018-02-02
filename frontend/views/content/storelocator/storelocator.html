@@ -469,28 +469,27 @@
 <div class="flex-item-container row-margin">
     <div class="map-section">
         <div class="map-place" id="map">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d45205.48201635978!2d72.82667811339341!3d19.047026924346575!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c8d20349da67%3A0x86b4fa1681bb01e9!2sShashi+Karkhanis+And+Associates!5e0!3m2!1sen!2sin!4v1517470606519" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+            <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d45205.48201635978!2d72.82667811339341!3d19.047026924346575!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c8d20349da67%3A0x86b4fa1681bb01e9!2sShashi+Karkhanis+And+Associates!5e0!3m2!1sen!2sin!4v1517470606519" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe> -->
         </div>
     </div>
     <div class="custom-slider">
         <div class="border">
             <div class="row">
-                <div class="col-md-8 col-md-offset-4 col-sm-12 col-xs-12">
+                <div class="col-md-9 col-md-offset-3 col-sm-12 col-xs-12">
                     <div class="location-title text-center">
                         <div class="btn-group" uib-dropdown>
                             <button id="single-button" type="button" class="btn location--btn" uib-dropdown-toggle ng-disabled="disabled">
                                 {{locationButton}} <span><i class="fa fa-angle-down"></i></span>
       </button>
                             <ul class="location-dropdown location-dropdown-menu dropdown-menu" uib-dropdown-menu role="menu" aria-labelledby="single-button">
-                                <li role="menuitem" ng-click="changePlaces(location)" value="{{location.name}}" ng-repeat="location in locations"><a href="#">{{location.name}}</a></li>
+                                <li role="menuitem" ng-click="changePlaces(place)" value="Select Location" ng-repeat="place in location"><a href="#">{{place.city}}</a></li>
                             </ul>
                         </div>
                         <div class="location-name">
                             <h3 class="tab-title text-uppercase marg0">{{locationButton}}</h3>
                         </div>
                     </div>
-                    <flexslider class="section-padd" prev-text="" next-text="" animation="slide" item-width="300" item-margin="20" min-items="2" flexslider>
-                        <pre>{{location}}</pre>
+                    <flex-slider ng-if="showSlider" flex-slide="slocation in storeLocation track by $index" class="section-padd" animation="slide" item-width="300" item-margin="20" min-items="2"  prev-text="" next-text="" slideshow-speed="3000" animation-loop="true">
                         <li class="flex-li">
                             <div class="row">
                                 <div class="store-location-dtl">
@@ -499,17 +498,15 @@
                                         <!-- <p class="name"><b>3424</b></p> -->
                                     </div>
                                     <div class="store-location-addrs-dtl">
-                                        <address class="address"><b>Shop 2, Ground Floor,
-                                            <br>Opposite Bhaidas Auditorium, 
-                                            <br> JVPD Lane,Vile Parle West, 
-                                            <br>Mumbai</b></address>
-                                        <p class="contact-no"><b><i class="fa fa-phone"> 022 69999074</i></b></p>
+                                        <h4 class="title-subcity">{{slocation.subCity}}</h4>
+                                        <address class="address"><b>{{slocation.address}}</b></address>
+                                        <p class="contact-no"><i class="fa fa-phone"><b> {{slocation.contactNo}}</b> </i></p>
                                         <!-- <p class="email"><b>{{location.name}}</b></p> -->
                                     </div>
                                 </div>
                             </div>
                         </li>
-                    </flexslider>
+                    </flex-slider>
                 </div>
             </div>
 
