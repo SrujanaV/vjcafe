@@ -19,6 +19,22 @@ body {
     margin: 0;
 }
 
+@font-face {
+    font-family: 'Open Sans', sans-serif;
+    src: url("../fonts/OpenSans-Regular.ttf");
+}
+@font-face {
+    font-family: 'Playfair Display', serif;
+    src: url("../fonts/PlayfairDisplay-Regular.ttf");
+}
+@font-face {
+    font-family: 'Grand Hotel', cursive;
+    src: url("../fonts/GrandHotel-Regular.ttf");
+}
+@font-face {
+    font-family: 'Breetty';
+    src: url("../fonts/Breetty Regular.otf");
+}
 a {
     display: inline-block;
 }
@@ -149,6 +165,25 @@ footer {
 
 header {
     transition: all 300ms ease;
+    .nav .active>a,
+    .nav>.active>a:hover,
+    .nav>.active>a:focus {
+        color: red;
+    }
+}
+
+.header-change {
+    position: fixed !important;
+    width: 100%;
+    top: 10px;
+    left: 0;
+    padding: 10px 0px !important;
+    z-index: 9999;
+    background: #222328;
+    -webkit-box-shadow: 0px 13px 35px -12px rgba(0, 0, 0, 0.15);
+    box-shadow: 0px 13px 35px -12px rgba(0, 0, 0, 0.15);
+    -webkit-animation: menu_sticky 0.7s ease-in-out;
+    animation: menu_sticky 0.7s ease-in-out;
 }
 
 .nav-up {
@@ -201,7 +236,7 @@ footer p {
 .j3 .jr2-text {
     width: 150px !important;
     position: absolute;
-    left: -7px;
+    left: 0px;
     top: 30px;
 }
 
@@ -213,7 +248,7 @@ footer p {
 }
 
 .display-inline.jr2-img {
-    border: 1px solid #e21e23;
+    border: 1px solid #ee7a2f;
     padding: 5px;
     width: 200px;
     height: auto;
@@ -245,14 +280,14 @@ footer p {
     left: -42px;
     width: 10px;
     height: 10px;
-    border: 1px solid #e21e23;
+    border: 1px solid #ee7a2f;
     border-radius: 100%;
 }
 
 .display-inline.jr2-img:after,
 .display-inline.jr2-img:before {
     content: '';
-    background: #e21e23;
+    background: #ee7a2f;
 }
 
 .mt-105 {
@@ -264,7 +299,7 @@ footer p {
 }
 
 .btn-red {
-    background-color: #e21e23;
+    background-color: #ee7a2f;
     border: none;
     color: #fff;
     font-size: 20px;
@@ -288,7 +323,7 @@ footer p {
 //scss for swiper
 .small-socialicon i {
     font-size: 40px;
-    color: #daac5b;
+    color: #ee7a2f;
     padding: 0 0 20px 0;
 }
 
@@ -503,27 +538,35 @@ footer p {
     padding: 15px;
 }
 
+.d-flex {
+    display: flex;
+}
+
+.align-item-center {
+    align-items: center;
+}
+
 //scss for footer
 .social-icon li {
     i {
         font-size: 40px;
-        color: #daac5b;
-        margin-left: 35px;
         vertical-align: middle;
     }
 }
 
-.display-line{
+.display-line {
     display: inline-block;
- }
- .quick-link{
+}
+
+.quick-link {
     vertical-align: top;
     padding: 0 0px 0 70px;
- }
+}
 
 .footer-list-widget .social-name {
     font-size: 16px;
-    color: rgba(255, 255, 255, 0.6);    ;
+    color: rgba(255, 255, 255, 0.6);
+    ;
     padding: 0 8px;
 }
 
@@ -544,17 +587,19 @@ footer p {
     margin-top: 20px;
     font-weight: 300;
 }
-.franchise-list{
+
+.franchise-list {
     list-style-type: disc;
     font-weight: 300;
     margin-left: 20px;
- }
+}
+
 .franchise-form {
     color: white;
     h3 {
         color: white;
         margin-top: 20px;
-        margin-bottom: 10px;
+        margin-bottom: 25px;
     }
     p {
         margin: 0 0 10px;
@@ -568,12 +613,14 @@ footer p {
         margin: 15px 0;
     }
     .submit-button {
-        margin: 30px 0;
+        margin: 50px 0;
+        border: 2px solid white;
     }
 }
 
 //scss for blog page 
 .blog-box {
+    font-family: 'Open Sans', sans-serif;
     border-bottom: 1px solid #41240d;
     padding: 40px 0;
     margin-bottom: 60px;
@@ -586,12 +633,14 @@ footer p {
         font-size: 16px;
         text-transform: uppercase;
         font-weight: 700;
+        font-family: 'Open Sans', sans-serif;
     }
 }
 
 .blog-date {
     font-size: 12px;
-    color: black
+    color: black;
+    font-family: 'Open Sans', sans-serif;
 }
 
 .blog-btn button {
@@ -603,20 +652,22 @@ footer p {
 }
 
 .blog-popular-tag {
+    margin-top: 40px;
+    background: #e5ceb2;
+    padding: 25px 20px 25px 20px;
     h4 {
         font-size: 16px;
         text-transform: uppercase;
         font-weight: 700;
-        margin-bottom: 10px
+        margin-bottom: 10px;
+        font-family: 'Open Sans', sans-serif;
     }
-    margin-top:40px;
-    background: #e5ceb2;
-    padding: 25px 20px 25px 20px;
 }
 
 .blog-pop-title h5 {
     font-size: 14px;
     font-weight: 700;
+    font-family: 'Open Sans', sans-serif;
 }
 
 .blog-pop-date span {
@@ -630,4 +681,11 @@ footer p {
 
 .popular-top {
     padding-top: 12px;
+}
+
+.instragram-section {
+    overflow-y: scroll;
+    height: 500px;
+    width: 350px;
+    margin: 0 auto;
 }
