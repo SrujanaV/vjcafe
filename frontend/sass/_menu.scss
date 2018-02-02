@@ -97,11 +97,12 @@
 .theme-menu-wrapper.white-bg #mega-menu-wrapper .nav li.dropdown-holder .icon {color: #242424;}
 /*------------------- Mobile version ------------------*/
 @media (max-width: 991px) { /*---- Set Mobile breakpoint -----*/
+
   #mega-menu-wrapper .navbar-toggle {
     display: block;
     margin: 8px 15px 20px 0;
     padding: 0;
-    float: none;
+    float: right;
   }
   #mega-menu-wrapper .nav>li.dropdown-holder .sub-menu li a {font-size: 13px;line-height: 38px;}
   #mega-menu-wrapper .nav>li.dropdown-holder .sub-menu .icon {

@@ -1,3 +1,26 @@
  @media (max-width: $screen-xs-max) {
      // Mobile
+     //scss for header
+    header.theme-main-menu-one{
+  padding-top: 0;
+} 
+#mega-menu-wrapper .nav > li{
+    display: block;
+    text-align: center;
+}
+.menu-inner-logo{
+    display: none !important;
+}
+//end of header
+//scss for home
+.gallery-bg{
+    overflow: hidden;
+}
+  .gallery-bg .swiper-slide {
+         width: 200px !important;
+         height: 150px;
+     }
+     .gallery-bg .swiper-container1 {
+         padding: 0;
+     }
  }
