@@ -133,9 +133,9 @@ myApp.controller('StorelocatorCtrl', function ($scope, TemplateService, Navigati
         'subCity': [{
             'brand': 'img/brands/ms-custom.png',
             'name': 'Location 1 Name',
-            'subCity': 'Amravati',
+            'subCity': 'Navathe Nagar',
             'url': 'Location 1 URL',
-            'address': '444605, Badnera Rd, Vidhya Vihar Colony,  Navathe Nagar'
+            'address': '444605, Badnera Rd, Vidhya Vihar Colony'
         }],
     }, {
         'city': 'Surat',
@@ -144,9 +144,9 @@ myApp.controller('StorelocatorCtrl', function ($scope, TemplateService, Navigati
         'subCity': [{
             'brand': 'img/brands/ms-custom.png',
             'name': 'Location 1 Name',
-            'subCity': 'Surat',
+            'subCity': 'Vesu',
             'url': 'Location 1 URL',
-            'address': 'G-22, Prime Shoppers, Opp. Safal Square, University Road, Vesu',
+            'address': 'G-22, Prime Shoppers, Opp. Safal Square, University Road',
             'contactNo': '+91 098792 29492',
         }],
 
@@ -157,9 +157,9 @@ myApp.controller('StorelocatorCtrl', function ($scope, TemplateService, Navigati
         'subCity': [{
             'brand': 'img/brands/ms-custom.png',
             'name': 'Location 2 Name',
-            'subCity': 'Ahmedabad',
+            'subCity': 'Memnagar',
             'url': 'Location 2 URL',
-            'address': '7, Sushilnagar society - Part 2, Manav Mandir, Drive-In-Road, Mayur Nagar Society, Sushil Nagar Society, Memnagar',
+            'address': '7, Sushilnagar society - Part 2, Manav Mandir, Drive-In-Road, Mayur Nagar Society, Sushil Nagar Society',
             'contactNo': '+91 79 4892 3556'
         }],
 
