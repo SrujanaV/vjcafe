@@ -79,9 +79,9 @@ $scope.timeline = [{
         "img": "timeline3.jpg"
     }];
     $scope.testimonials=[{
-        "content": "Negative feedback is better none. I would rather have a man hate me than overlook me.",
-        "name": "Mahfuz Riad",
-        "country": "Germany"
+        "content": "we are very glad to be a part of the vj cafe family. the support from the team is overwhelming. VJ cafe's team is always ready to help whenever we need it. #weloveyoutoo.",
+        "name": "Jinal Shah",
+        "country": "Franchise Owner Ghatkopar "
     }, {
         "content": "Negative feedback is better none. I would rather have a man hate me than overlook me.",
         "name": "Mahfuz Riad",
