@@ -79,53 +79,41 @@ $scope.timeline = [{
         "img": "timeline3.jpg"
     }];
     $scope.testimonials=[{
-        "content": "we are very glad to be a part of the vj cafe family. the support from the team is overwhelming. VJ cafe's team is always ready to help whenever we need it. #weloveyoutoo.",
+        "content": "we are very glad to be a part of the vj cafe family. the support from the team is overwhelming. VJ cafe's team is always ready to help whenever we need it. #weloveyoutoo",
         "name": "Jinal Shah",
         "country": "Franchise Owner Ghatkopar "
     }, {
-        "content": "Negative feedback is better none. I would rather have a man hate me than overlook me.",
-        "name": "Mahfuz Riad",
-        "country": "Germany"
+        "content": "The food there is commendable, mouth watering. There are many varieties of fries and they keep adding few once in a month or two.",
+        "name": "Sandeep Parui",
+        "country": "Customer"
     }, {
-        "content": "Negative feedback is better none. I would rather have a man hate me than overlook me.",
-        "name": "Mahfuz Riad",
-        "country": "Germany"
+        "content": "The best place to have awesome fries in awesome prices. This place has been a hub for all college going people in vileparle. All the items on their menu are in demand by all masses.",
+        "name": "food schmooze",
+        "country": "Customer"
     },{
-        "content": "Negative feedback is better none. I would rather have a man hate me than overlook me.",
-        "name": "Mahfuz Riad",
-        "country": "Germany"
+        "content": "If you are looking for pure veg or jain options in wraps and fries this is the right place for you. As far as the food goes..the wraps and fries are delish..",
+        "name": "priyanka",
+        "country": "Customer"
     }, {
-        "content": "Negative feedback is better none. I would rather have a man hate me than overlook me.",
-        "name": "Mahfuz Riad",
-        "country": "Germany"
+        "content": "The vj cafe is very popular for its fries especially amongst youngsters. They have amazing fries options to order from.I have ordered BBQ cheese fries and omg it was delicious.",
+        "name": "hardik kothari",
+        "country": "Customer"
     }, {
-        "content": "Negative feedback is better none. I would rather have a man hate me than overlook me.",
-        "name": "Mahfuz Riad",
-        "country": "Germany"
+        "content": "Good place and amazing people who are running the joint. They make a point to make you comfortable and help with the order. The food is good, reasonable and in good quantity.",
+        "name": "Neil joshi",
+        "country": "Customer"
     },{
-        "content": "Negative feedback is better none. I would rather have a man hate me than overlook me.",
-        "name": "Mahfuz Riad",
-        "country": "Germany"
+        "content": "This is a great place to eat fries. They serve amazing fries mixed with various sauces which gives a good taste to our taste buds, I really liked the BBQ fries from here.",
+        "name": "Manthan Kulkarni",
+        "country": "Customer"
     }, {
-        "content": "Negative feedback is better none. I would rather have a man hate me than overlook me.",
-        "name": "Mahfuz Riad",
-        "country": "Germany"
+        "content": "The place is the adda for all teenagers... They have really good and very prompt service... Also the place is very small and very neet and clean...",
+        "name": "asmita pawar",
+        "country": "Customer"
     }, {
-        "content": "Negative feedback is better none. I would rather have a man hate me than overlook me.",
-        "name": "Mahfuz Riad",
-        "country": "Germany"
-    },{
-        "content": "Negative feedback is better none. I would rather have a man hate me than overlook me.",
-        "name": "Mahfuz Riad",
-        "country": "Germany"
-    }, {
-        "content": "Negative feedback is better none. I would rather have a man hate me than overlook me.",
-        "name": "Mahfuz Riad",
-        "country": "Germany"
-    }, {
-        "content": "Negative feedback is better none. I would rather have a man hate me than overlook me.",
-        "name": "Mahfuz Riad",
-        "country": "Germany"
+        "content": "Variety of fries are offered by this place. They also have wedges, rolls, burgers and so on. Pototo twister is a must if you visit this place.",
+        "name": "siddhesh pathak",
+        "country": "Customer"
     }]
     
 })

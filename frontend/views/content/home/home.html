@@ -66,13 +66,13 @@
             </div>
             <!-- /.theme-section-title -->
             <div class="row">
-                <swiper id="client-slider" autoplay="true" effect="slide" slides-per-view="3" speed="0">
+                <swiper id="client-slider" autoplay="5000" effect="slide" slides-per-view="3" slides-per-group="3" slide-to-clicked-slide="true" speed="1000">
                     <slides>
                         <slide class="item" ng-repeat="testimonial in testimonials track by $index">
                             <div class="client-text">
                                 <i class="fa fa-quote-left fa-4x icon" aria-hidden="true"></i>
                                 <p>{{testimonial.content}}</p>
-                                <h6>{{testimonial.name}} / <span>{{testimonial.country}}</span></h6>
+                                <h6>{{testimonial.name}} / <span class="country">{{testimonial.country}}</span></h6>
                             </div>
                             <!-- /.client-text -->
                         </slide>

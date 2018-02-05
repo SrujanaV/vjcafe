@@ -309,6 +309,14 @@ footer p {
 
 .client-text {
     margin: 0 8px;
+    p{
+        height: 150px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    .country{
+        font-size: 14px;
+    }
 }
 
 //end of timeline css
@@ -362,39 +370,6 @@ footer p {
     }
 }
 
-//scss for store-locator
-//  .head-office{
-//      padding: 20px 0;
-//      border-bottom: dashed 1px #333;
-//  }
-//  .title{
-//      margin-bottom: 10px;
-//      font-weight: bold;
-//  }
-//  .contact-ways{
-//      font-size: 14px;
-//  }
-//  .telephone {
-//      .hours{
-//         font-size: 12px;        
-//      }
-//     margin-top: 5px;
-//     i{
-//         margin-right: 5px;
-//     }
-//     span{
-//         text-decoration: underline;
-//         cursor: pointer;
-//         font-size: 12px;
-//         display: inline-block;
-//         margin-right: 5px;
-//     }
-//     a{
-//         text-decoration: none;
-//         color: black;
-//         cursor: pointer;
-//     }
-// }
 .title-subcity{
     color: white;
     margin-bottom: 10px;
