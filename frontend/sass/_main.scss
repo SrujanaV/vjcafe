@@ -313,10 +313,8 @@ footer p {
 
 //end of timeline css
 //scss for swiper
-.small-socialicon i {
-    font-size: 40px;
-    color: #ee7a2f;
-    padding: 0 0 20px 0;
+.small-socialicon img {
+   margin: 30px auto;
 }
 
 .home-opacity {
@@ -552,7 +550,6 @@ footer p {
 .social-icon li {
     i {
         font-size: 40px;
-        color: $brand-orange;
         vertical-align: middle;
     }
 }
@@ -567,9 +564,9 @@ footer p {
 }
 
 .footer-list-widget .social-name {
-    font-size: 16px;
+    font-size: 15px;
     color: rgba(255, 255, 255, 0.6);
-    ;
+    vertical-align: top;
     padding: 0 8px;
 }
 
@@ -628,7 +625,9 @@ footer p {
     padding: 40px 0;
     margin-bottom: 60px;
 }
-
+.blog-img{
+    height:240px;
+}
 .blog-title {
     height: 50px;
     h4 {

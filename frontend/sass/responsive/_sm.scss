@@ -10,28 +10,37 @@
      }
      .menu-inner-logo {
          display: none !important;
+     }  
+       .mobile-header a img {
+         width: 150px;
+         padding: 0 20px;
      }
      //end of header
      //scss for home
-     .gallery-bg{
-    overflow: hidden;
-}
-.j2 .jr2-text, .j3 .jr2-text{
-        left: 100px;
-}
-.j2 .jr2-img, .j3 .jr2-img{
-    right:100px;
-}
-//for footer
-.footer-list-widget .social-name {
-    font-size: 12px;
-    color: rgba(255, 255, 255, 0.6);
-    padding: 0 0px;
-}
-.top-footer-widget h5{
-     font-size: 12px;
-}
-.quick-link{
-        padding: 0 0px 0 10px;
-}
+     .gallery-bg {
+         overflow: hidden;
+     }
+     .j2 .jr2-text,
+     .j3 .jr2-text {
+         left: 100px;
+     }
+     .j2 .jr2-img,
+     .j3 .jr2-img {
+         right: 100px;
+     }
+     //for footer
+     .footer-list-widget .social-name {
+         font-size: 12px;
+         color: rgba(255, 255, 255, 0.6);
+         padding: 0 0px;
+     }
+     .top-footer-widget h5 {
+         font-size: 12px;
+     }
+     .quick-link {
+         padding: 0 0px 0 10px;
+     }
+     .footer-logo .logo img {
+         width: 135px;
+     }
  }
