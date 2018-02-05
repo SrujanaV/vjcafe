@@ -142,9 +142,9 @@ footer {
 }
 
 //FLEX SLIDER FIXES
-.flex-direction-nav {
-    display: none;
-}
+// .flex-direction-nav {
+//     display: none;
+// }
 
 .content {
     min-height: 450px;
@@ -454,7 +454,7 @@ footer p {
                 font-size: 20px;
             }
             &:focus {
-                background-color: #341314 !important;
+                background: rgba(0, 0, 0, 0.7) !important;
                 color: white;
             }
         }
@@ -483,7 +483,7 @@ footer p {
         display: none;
     }
     .flexslider {
-        margin: 0;
+        margin: 0 15px 0 0;
         background: rgba(0, 0, 0, 0.7);
         border: 0px dashed #fff;
         padding-top: 15px;
@@ -493,21 +493,34 @@ footer p {
         color: white;
         .flex-prev {
             opacity: 1;
-            left: -55px !important;
+            left: 5px !important;
+            color: black;
             @include size(32px,
-            32px);
+            45px);
+            &::before{
+                color: white;
+                content: '\f104';
+                font: normal normal normal 14px/1 FontAwesome;
+                font-size: 50px;
+            }
         }
         .flex-next {
-            right: -10px !important;
+            right: 5px !important;
             @include size(32px,
-            32px);
+            45px);
             opacity: 1;
+            &::before{
+                color: white;
+                content: '\f105';
+                font: normal normal normal 14px/1 FontAwesome;
+                font-size: 50px;
+            }
         }
     }
 }
 
 .store-location-dtl {
-    @include padding(15px);
+    @include padding(15px 40px);
     color: white;
 }
 
@@ -535,7 +548,7 @@ footer p {
 .dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus {
     text-decoration: none;
     color: white !important;
-    background-color: #341314 !important;
+    background: rgba(0, 0, 0, 0.7) !important;
 }
 
 .d-flex {
