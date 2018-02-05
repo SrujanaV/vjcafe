@@ -28,6 +28,42 @@
      .j3 .jr2-img {
          right: 100px;
      }
+      //Start of Store locator.html
+      .store-locator {
+        .flex-item-container {
+            position: relative;
+            @include align-items(initial);
+            @include flex-direction(column);
+        }
+    }
+    .row-margin {
+        margin-bottom: 15px;
+        margin-top: 15px;
+    }
+    .map-section {
+        width: 100%;
+        @include margin(15px);
+    }
+    .custom-slider {
+        @include margin(0 15px);
+        .location-title {
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+        .section-padd{
+            padding: 15px;
+        }
+        .flexslider {
+            margin: 0 15px 0 15px;
+            .flex-prev {
+                left: -22px!important;
+            }
+            .flex-next {
+                right: -22px!important;
+            }
+        }
+    }
+    //end of store-locator
      //for footer
      .footer-list-widget .social-name {
          font-size: 12px;
