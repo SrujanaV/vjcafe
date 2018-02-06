@@ -144,7 +144,287 @@ myApp.directive('uploadImage', function ($http, $filter, $timeout) {
     };
 });
 
+myApp.directive('uploadImageFiles', function ($http, $filter, $timeout, toastr) {
+    return {
+        templateUrl: 'views/directive/uploadImageFiles.html',
+        scope: {
+            model: '=ngModel',
+            type: "@type",
+            callback: "&ngCallback"
+        },
+        link: function ($scope, element, attrs) {
+            console.log($scope.model);
+            $scope.showImage = function () {};
+            $scope.check = true;
+            if (!$scope.type) {
+                $scope.type = "image";
+            }
+            $scope.isMultiple = false;
+            $scope.inObject = false;
+            if (attrs.multiple == "true") {
+                $scope.isMultiple = true;
+                $("#inputImage").attr("multiple", "ADD");
+            }
+            if (attrs.noView || attrs.noView === "") {
+                $scope.noShow = true;
+            }
+            // if (attrs.required) {
+            //     $scope.required = true;
+            // } else {
+            //     $scope.required = false;
+            // }
 
+            $scope.$watch("image", function (newVal, oldVal) {
+                // console.log(newVal, oldVal);
+                isArr = _.isArray(newVal);
+                if (!isArr && newVal && newVal.file) {
+                    var numMatches = newVal.file.name.match(/([.])/g).length;
+                    var text = newVal.file.name;
+                    var result = /[^.]*$/.exec(text)[0];
+                    if ((newVal.file.type == 'image/png' || newVal.file.type == 'image/jpeg' || result == 'jpg' || result == 'png') && numMatches == 1) {
+                        $scope.uploadNow(newVal);
+                    } else {
+                        $scope.model = [];
+                        $scope.uploadStatus = "";
+                        toastr.error("Check File Format");
+                    }
+                } else if (isArr && newVal.length > 0 && newVal[0].file) {
+                    console.log("new val", newVal);
+                    $timeout(function () {
+                        // console.log(oldVal, newVal);
+                        // console.log(newVal.length);
+                        async.eachLimit(newVal, 3, function (image, callback) {
+                            // Perform operation on file here.
+                            console.log('Processing file ' + image);
+                            var numMatches = image.file.name.match(/([.])/g).length;
+                            var text = image.file.name;
+                            var result = /[^.]*$/.exec(text)[0];
+                            if ((image.file.type == 'image/png' || image.file.type == 'image/jpeg' || result == 'jpg' || result == 'png') && numMatches == 1) {
+                                $scope.uploadStatus = "uploading";
+                                var Template = this;
+                                image.hide = true;
+                                var formData = new FormData();
+                                formData.append('file', image.file, image.file.name);
+                                $http.post(uploadurl, formData, {
+                                    headers: {
+                                        'Content-Type': undefined
+                                    },
+                                    transformRequest: angular.identity
+                                }).then(function (data) {
+                                    data = data.data;
+                                    $scope.uploadStatus = "uploaded";
+                                    if ($scope.isMultiple) {
+                                        if ($scope.inObject) {
+                                            $scope.model.push({
+                                                "image": data.data[0]
+                                            });
+                                            callback(null, "next");
+                                        } else {
+                                            if (!$scope.model) {
+                                                $scope.clearOld();
+                                            }
+                                            var fileList = {};
+                                            fileList.file = data.data[0];
+                                            $scope.model.push(data.data[0]);
+                                            callback(null, "next");
+                                            $scope.imgGrp();
+                                        }
+                                    } else {
+                                        if (_.endsWith(data.data[0], ".pdf")) {
+                                            $scope.type = "pdf";
+                                        } else {
+                                            $scope.type = "image";
+                                        }
+                                        var fileList = {};
+                                        fileList.file = data.data[0];
+                                        $scope.model = data.data[0];
+                                        console.log($scope.model, 'model means blob')
+                                        callback(null, "next");
+                                    }
+                                });
+                            } else {
+                                $scope.model = [];
+                                $scope.uploadStatus = "";
+                                toastr.error("Check File Format");
+                                // callback(null, "next");
+                            }
+                        }, function (err) {
+                            // if any of the file processing produced an error, err would equal that error
+                            if (err) {
+                                // One of the iterations produced an error.
+                                // All processing will now stop.
+                                console.log('A file failed to process');
+                            } else {
+                                console.log('All files have been processed successfully');
+                            }
+                        });
+                        // _.each(newVal, function (newV, key) {
+                        //     if (newV && newV.file) {
+                        //         $scope.uploadNow(newV);
+                        //     }
+                        // });
+                    }, 1500);
+
+                }
+            });
+
+            if ($scope.model) {
+                if (_.isArray($scope.model)) {
+                    $scope.image = [];
+                    _.each($scope.model, function (n) {
+                        $scope.image.push({
+                            url: n
+                        });
+                    });
+                    $scope.see = $scope.model.slice(0, 8);
+                    $scope.length_img = $scope.model.length;
+                    $scope.display_img = $scope.length_img;
+                    $scope.display_img = $scope.display_img / 8;
+                    $scope.display_img = Math.ceil($scope.display_img);
+                    $scope.getNumber = function (num) {
+                        return new Array(num);
+                    }
+                } else {
+                    if (_.endsWith($scope.model, ".pdf")) {
+                        $scope.type = "pdf";
+                    }
+                }
+
+            }
+            if (attrs.inobj || attrs.inobj === "") {
+                $scope.inObject = true;
+            }
+
+            $scope.clearOld = function () {
+                $scope.model = [];
+                $scope.uploadStatus = "removed";
+            };
+
+            $scope.removeImage = function (index) {
+                $scope.image = [];
+                $scope.model.splice(($scope.pageNumber - 1) * 8 + index, 1);
+                $scope.see = $scope.model.slice(0, 8);
+                $scope.length_img = $scope.model.length;
+                $scope.display_img = $scope.length_img;
+                $scope.display_img = $scope.display_img / 8;
+                $scope.display_img = Math.ceil($scope.display_img);
+                $scope.getNumber = function (num) {
+                    return new Array(num);
+                }
+                _.each($scope.model, function (n) {
+                    $scope.image.push({
+                        url: n
+                    });
+                });
+            }
+            $scope.uploadNow = function (image) {
+                $scope.uploadStatus = "uploading";
+                var Template = this;
+                image.hide = true;
+                var formData = new FormData();
+                formData.append('file', image.file, image.file.name);
+                $http.post(uploadurl, formData, {
+                    headers: {
+                        'Content-Type': undefined
+                    },
+                    transformRequest: angular.identity
+                }).then(function (data) {
+                    // console.log("data---", data);
+                    data = data.data;
+                    if (data.value == true) {
+                        $scope.uploadStatus = "uploaded";
+                        if ($scope.isMultiple) {
+                            if ($scope.inObject) {
+                                $scope.model.push({
+                                    "image": data.data[0]
+                                });
+                            } else {
+                                if (!$scope.model) {
+                                    $scope.clearOld();
+                                }
+                                var fileList = {};
+                                fileList.file = data.data[0];
+                                $scope.model.push(data.data[0]);
+                            }
+                        } else {
+                            if (_.endsWith(data.data[0], ".pdf")) {
+                                $scope.type = "pdf";
+                            } else {
+                                $scope.type = "image";
+                            }
+                            var fileList = {};
+                            fileList.file = data.data[0];
+                            $scope.model = data.data[0];
+                            // console.log($scope.model, 'model means blob')
+                        }
+                        $timeout(function () {
+                            $scope.callback();
+                        }, 15000);
+                    } else {
+                        $scope.model = [];
+                        $scope.uploadStatus = "";
+                        toastr.error("Check File Format");
+                    }
+                });
+            };
+
+            $scope.imgGrp = function () {
+                $scope.length_img = $scope.model.length;
+                $scope.display_img = $scope.length_img;
+                $scope.display_img = $scope.display_img / 8;
+                $scope.display_img = Math.ceil($scope.display_img);
+                // console.log("qwerty-------", $scope.display_img);
+                $scope.getNumber = function (num) {
+                    return new Array(num);
+                }
+                if ($scope.length_img > 0) {
+                    $scope.see = $scope.model.slice(0, 8);
+                    $scope.pageNumber = 1;
+                }
+            }
+            $scope.changePage = function (pageNo) {
+                $scope.pageNumber = pageNo;
+                if (pageNo == 1) {
+                    console.log("1st page", pageNo);
+                    $scope.see = $scope.model.slice(0, 8);
+                } else {
+                    console.log("pageNo", pageNo);
+                    $scope.answer = (pageNo - 1) * 8;
+                    $scope.multiplication = (8 * pageNo);
+                    $scope.see = $scope.model.slice($scope.answer, $scope.multiplication);
+                }
+            }
+            $scope.changePagefirst = function () {
+                $scope.see = $scope.model.slice(0, 8);
+                $scope.pageNumber = 1;
+            }
+            $scope.changePagelast = function () {
+                $scope.answer = ($scope.display_img - 1) * 8;
+                $scope.multiplication = (8 * $scope.display_img);
+                $scope.see = $scope.model.slice($scope.answer, $scope.multiplication);
+                $scope.pageNumber = $scope.display_img;
+            }
+            $scope.changePagePre = function () {
+                if ($scope.pageNumber == 1) {
+                    $scope.pageNumber = $scope.display_img + 1;
+                }
+                $scope.answer = (($scope.pageNumber - 2) * 8);
+                $scope.multiplication = (8 * ($scope.pageNumber - 1));
+                $scope.see = $scope.model.slice($scope.answer, $scope.multiplication);
+                $scope.pageNumber = $scope.pageNumber - 1;
+            }
+            $scope.changePageNext = function () {
+                if ($scope.pageNumber == $scope.display_img) {
+                    $scope.pageNumber = 0;
+                }
+                $scope.answer = ($scope.pageNumber * 8);
+                $scope.multiplication = (8 * ($scope.pageNumber + 1));
+                $scope.see = $scope.model.slice($scope.answer, $scope.multiplication);
+                $scope.pageNumber = $scope.pageNumber + 1;
+            }
+        }
+    };
+});
 
 myApp.directive('onlyDigits', function () {
     return {
