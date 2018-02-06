@@ -3,7 +3,8 @@ var schema = new Schema({
         type: String,
         required: true
     },
-    image: [String]
+    image: [String],
+    order: Number
 });
 
 schema.plugin(deepPopulate, {});
