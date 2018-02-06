@@ -7,11 +7,35 @@ var uploadurl = imgurl;
 
 myApp.factory('NavigationService', function ($http) {
     var navigation = [{
-        name: "Users",
-        classis: "active",
-        sref: "#!/page/viewUser//",
-        icon: "phone"
-    }];
+            name: "Users",
+            classis: "active",
+            sref: "#!/page/viewUser//",
+            icon: "phone"
+        },
+        {
+            name: "Slider",
+            classis: "active",
+            sref: "#!/page/viewSlider//",
+            icon: "phone"
+        }, {
+            name: "Tesimonial",
+            classis: "active",
+            sref: "#!/page/viewTesimonial//",
+            icon: "phone"
+        },
+        {
+            name: "Gallery",
+            classis: "active",
+            sref: "#!/page/viewGallery//",
+            icon: "phone"
+        },
+        {
+            name: "StoreLocators",
+            classis: "active",
+            sref: "#!/page/viewStoreLocator//",
+            icon: "phone"
+        }
+    ];
 
     return {
         getnav: function () {

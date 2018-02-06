@@ -1,0 +1,52 @@
+{
+    "title": "Edit Tesimonial",
+    "name": "Tesimonial",
+    "jsonPage": "viewTesimonial",
+    "desciption": "",
+    "pageType": "edit",
+    "urlFields": ["_id"],
+    "fields": [{
+        "name": "Name",
+        "type": "text",
+        "tableRef": "name",
+        "placeholder": "Enter Name",
+        "id": "name",
+        "validation": ["required", "trim", ""],
+        "url": ""
+    }, {
+        "name": "Description",
+        "type": "wysiwyg",
+        "tableRef": "description",
+        "placeholder": "Enter Description",
+        "id": "description",
+        "url": "",
+        "validation": ["", "trim", ""]
+    }],
+    "action": [{
+        "name": "submit",
+        "action": "submitTesimonial",
+        "stateName": {
+            "page": "page",
+            "json": {
+                "id": "viewTesimonial"
+            }
+        }
+    }, {
+        "name": "cancel",
+        "sideMenuRedirect": true,
+        "stateName": {
+            "page": "page",
+            "json": {
+                "id": "viewTesimonial"
+            }
+        }
+    }],
+    "apiCall": {
+        "url": "Tesimonial/save",
+        "params": "_id"
+    },
+    "preApi": {
+        "url": "Tesimonial/getOne",
+        "params": "_id"
+    }
+}

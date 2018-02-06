@@ -1,0 +1,50 @@
+{
+    "title": "Create Slider",
+    "name": "Slider",
+    "jsonPage": "viewSlider",
+    "desciption": "",
+    "pageType": "create",
+    "urlFields": ["Slider"],
+    "fields": [{
+        "name": "Title",
+        "type": "text",
+        "tableRef": "name",
+        "placeholder": "Enter Slider title",
+        "id": "name",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    }, {
+        "name": "Image",
+        "type": "image",
+        "tableRef": "backgroundImage",
+        "placeholder": "Enter Background Image",
+        "id": "backgroundImage",
+        "size": "540 x 435",
+        "option": "single",
+        "validation": ["", "trim", ""],
+        "view": true,
+        "url": ""
+    }],
+    "action": [{
+        "name": "submit",
+        "action": "submitSlider",
+        "stateName": {
+            "page": "page",
+            "json": {
+                "id": "viewSlider"
+            }
+        }
+    }, {
+        "name": "cancel",
+        "sideMenuRedirect": true,
+        "stateName": {
+            "page": "page",
+            "json": {
+                "id": "viewSlider"
+            }
+        }
+    }],
+    "apiCall": {
+        "url": "Slider/save"
+    }
+}
