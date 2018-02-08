@@ -6,164 +6,168 @@ myApp.controller('StorelocatorCtrl', function ($scope, TemplateService, Navigati
     $scope.storeLocation = []; // We need to add city and subCity array of obj
     $scope.locationButton; // To change the value(City) of button
     $scope.locationDropdownOpen = false;
-    $scope.location = [{
-        'city': 'Mumbai',
-        'lat': 19.0760,
-        'long': 72.8777,
-        'subCity': [{
-            'brand': 'img/brands/tony1.png',
-            'name': 'Location 1 Name',
-            'subCity': 'Sion',
-            'url': 'Location 1 URL',
-            'address': '17/A, Shashi building,ground floor, sion circle'
-        }, {
-            'brand': 'img/brands/ms-custom.png',
-            'name': 'Location 2 Name',
-            'subCity': 'Vile Parle',
-            'url': 'Location 2 URL',
-            'address': 'Shop 7, Meghdoot, Purushottom Kheraj Road, Opposite Kalidas Theatre',
-            'contactNo': '022 69999074'
-        }, {
-            'brand': 'img/brands/umber.png',
-            'name': 'Location 3 Name',
-            'subCity': 'Mulund',
-            'url': 'Location 3 URL',
-            'address': 'Shop No 2, Morya Mahal,Linking Road,  mumbai central, Mumbai - 400050',
-            'contactNo': '+91 8291613030'
-        }, {
-            'brand': 'img/brands/umber.png',
-            'name': 'Location 4 Name',
-            'subCity': 'Borivali',
-            'url': 'Location 4 URL',
-            'address': 'Shop No.5, Shroff Tower, Sodawala Lane, Himmat Nagar',
-            'contactNo': '+91 9930887711'
-        }, {
-            'brand': 'img/brands/umber.png',
-            'name': 'Location 5 Name',
-            'subCity': 'Chembur',
-            'url': 'Location 5 URL',
-            'address': 'Shop 3, Cubic Mall, Dr. CG Road,Chembur',
-            'contactNo': '022 25200302'
-        }, {
-            'brand': 'img/brands/umber.png',
-            'name': 'Location 6 Name',
-            'subCity': 'Ghatkopar',
-            'url': 'Location 6 URL',
-            'address': '3, Prabhu Krupa Buidling, Tilak Road, Opposite Sindhu Road',
-            'contactNo': '+91 7045583872'
-        }, {
-            'brand': 'img/brands/umber.png',
-            'name': 'Location 8 Name',
-            'subCity': 'Matunga',
-            'url': 'Location 8 URL',
-            'address': 'Plot 362, Broadway Building, Dr. Babasaheb Ambedkar Road, Kings Circle',
-            'contactNo': '022 69999071'
-        }, {
-            'brand': 'img/brands/umber.png',
-            'name': 'Location 9 Name',
-            'subCity': 'Bandra',
-            'url': 'Location 9 URL',
-            'address': '248, Linking Road',
-            'contactNo': '022 65999075'
-        }, {
-            'brand': 'img/brands/umber.png',
-            'name': 'Location 10 Name',
-            'subCity': 'Kandivali',
-            'url': 'Location 10 URL',
-            'address': 'Shop 10, Shubhkamna Building, Mahavir Nagar',
-            'contactNo': '+91 9664001200'
-        }, {
-            'brand': 'img/brands/umber.png',
-            'name': 'Location 11 Name',
-            'subCity': 'Malad',
-            'url': 'Location 11 URL',
-            'address': '4, Ganga Niwas Society, Opposite Toyota Showroom, Link road',
-            'contactNo': '+91 9987150646'
-        }, {
-            'brand': 'img/brands/umber.png',
-            'name': 'Location 12 Name',
-            'subCity': 'Thane',
-            'url': 'Location 12 URL',
-            'address': 'Shop 5, Saro Darshan Tower, Shivaji Path,  Talao Pali Junction, Near Kalyan Jewellers, Naupada',
-            'contactNo': '+91 9820318541'
-        }, {
-            'brand': 'img/brands/umber.png',
-            'name': 'Location 13 Name',
-            'subCity': 'Bhayandar',
-            'url': 'Location 13 URL',
-            'address': 'Shop No. 3, Krishna Kunj Building, BP Road, Opp. Sai Baba Hospital, Venkateshwar Nagar',
-            'contactNo': '+91 9594278276 / +91 7977320638'
-        }]
+    NavigationService.getStoreLocator(function (data) {
+        console.log("in StoreLocatore", data);
+        $scope.location = data.data.data.results;
+    });
+    // $scope.location = [{
+    //     'city': 'Mumbai',
+    //     'lat': 19.0760,
+    //     'long': 72.8777,
+    //     'subCity': [{
+    //         'brand': 'img/brands/tony1.png',
+    //         'name': 'Location 1 Name',
+    //         'subCity': 'Sion',
+    //         'url': 'Location 1 URL',
+    //         'address': '17/A, Shashi building,ground floor, sion circle'
+    //     }, {
+    //         'brand': 'img/brands/ms-custom.png',
+    //         'name': 'Location 2 Name',
+    //         'subCity': 'Vile Parle',
+    //         'url': 'Location 2 URL',
+    //         'address': 'Shop 7, Meghdoot, Purushottom Kheraj Road, Opposite Kalidas Theatre',
+    //         'contactNo': '022 69999074'
+    //     }, {
+    //         'brand': 'img/brands/umber.png',
+    //         'name': 'Location 3 Name',
+    //         'subCity': 'Mulund',
+    //         'url': 'Location 3 URL',
+    //         'address': 'Shop No 2, Morya Mahal,Linking Road,  mumbai central, Mumbai - 400050',
+    //         'contactNo': '+91 8291613030'
+    //     }, {
+    //         'brand': 'img/brands/umber.png',
+    //         'name': 'Location 4 Name',
+    //         'subCity': 'Borivali',
+    //         'url': 'Location 4 URL',
+    //         'address': 'Shop No.5, Shroff Tower, Sodawala Lane, Himmat Nagar',
+    //         'contactNo': '+91 9930887711'
+    //     }, {
+    //         'brand': 'img/brands/umber.png',
+    //         'name': 'Location 5 Name',
+    //         'subCity': 'Chembur',
+    //         'url': 'Location 5 URL',
+    //         'address': 'Shop 3, Cubic Mall, Dr. CG Road,Chembur',
+    //         'contactNo': '022 25200302'
+    //     }, {
+    //         'brand': 'img/brands/umber.png',
+    //         'name': 'Location 6 Name',
+    //         'subCity': 'Ghatkopar',
+    //         'url': 'Location 6 URL',
+    //         'address': '3, Prabhu Krupa Buidling, Tilak Road, Opposite Sindhu Road',
+    //         'contactNo': '+91 7045583872'
+    //     }, {
+    //         'brand': 'img/brands/umber.png',
+    //         'name': 'Location 8 Name',
+    //         'subCity': 'Matunga',
+    //         'url': 'Location 8 URL',
+    //         'address': 'Plot 362, Broadway Building, Dr. Babasaheb Ambedkar Road, Kings Circle',
+    //         'contactNo': '022 69999071'
+    //     }, {
+    //         'brand': 'img/brands/umber.png',
+    //         'name': 'Location 9 Name',
+    //         'subCity': 'Bandra',
+    //         'url': 'Location 9 URL',
+    //         'address': '248, Linking Road',
+    //         'contactNo': '022 65999075'
+    //     }, {
+    //         'brand': 'img/brands/umber.png',
+    //         'name': 'Location 10 Name',
+    //         'subCity': 'Kandivali',
+    //         'url': 'Location 10 URL',
+    //         'address': 'Shop 10, Shubhkamna Building, Mahavir Nagar',
+    //         'contactNo': '+91 9664001200'
+    //     }, {
+    //         'brand': 'img/brands/umber.png',
+    //         'name': 'Location 11 Name',
+    //         'subCity': 'Malad',
+    //         'url': 'Location 11 URL',
+    //         'address': '4, Ganga Niwas Society, Opposite Toyota Showroom, Link road',
+    //         'contactNo': '+91 9987150646'
+    //     }, {
+    //         'brand': 'img/brands/umber.png',
+    //         'name': 'Location 12 Name',
+    //         'subCity': 'Thane',
+    //         'url': 'Location 12 URL',
+    //         'address': 'Shop 5, Saro Darshan Tower, Shivaji Path,  Talao Pali Junction, Near Kalyan Jewellers, Naupada',
+    //         'contactNo': '+91 9820318541'
+    //     }, {
+    //         'brand': 'img/brands/umber.png',
+    //         'name': 'Location 13 Name',
+    //         'subCity': 'Bhayandar',
+    //         'url': 'Location 13 URL',
+    //         'address': 'Shop No. 3, Krishna Kunj Building, BP Road, Opp. Sai Baba Hospital, Venkateshwar Nagar',
+    //         'contactNo': '+91 9594278276 / +91 7977320638'
+    //     }]
 
-    }, {
-        'city': 'Navi Mumbai',
-        'lat': 19.0330,
-        'long': 73.0297,
-        'subCity': [{
-            'brand': 'img/brands/dockers.png',
-            'name': 'Location 1 Name',
-            'subCity': 'Vashi',
-            'url': 'Location 1 URL',
-            'address': 'Pranavanandji Marg, Sector 30A, Vashi',
-            'contactNo': '022 2781 0853'
-        }]
-    }, {
-        'city': 'Thane',
-        'lat': 19.2183,
-        'long': 72.9781,
-        'subCity': [{
-            'brand': 'img/brands/umber.png',
-            'name': 'Location 1 Name',
-            'subCity': 'Mira Road',
-            'url': 'Location 1 URL',
-            'address': 'Shop 11, Oswal Orbit Shopping Center, Kanakia Junction, Chandan Shanti, Mira Road, Thane',
-            'contactNo': '+91 7506963733'
-        }, {
-            'brand': 'img/brands/ms-custom.png',
-            'name': 'Location 2 Name',
-            'subCity': 'Naupada',
-            'url': 'Location 2 URL',
-            'address': 'Shop 5, Saro Darshan Tower, Shivaji Path,  Talao Pali Junction, Near Kalyan Jewellers',
-            'contactNo': '+91 9820318541'
-        }],
-    }, {
-        'city': 'Amravati',
-        'lat': 20.9374,
-        'long': 77.7796,
-        'subCity': [{
-            'brand': 'img/brands/ms-custom.png',
-            'name': 'Location 1 Name',
-            'subCity': 'Navathe Nagar',
-            'url': 'Location 1 URL',
-            'address': '444605, Badnera Rd, Vidhya Vihar Colony'
-        }],
-    }, {
-        'city': 'Surat',
-        'lat': 21.1702,
-        'long': 72.8311,
-        'subCity': [{
-            'brand': 'img/brands/ms-custom.png',
-            'name': 'Location 1 Name',
-            'subCity': 'Vesu',
-            'url': 'Location 1 URL',
-            'address': 'G-22, Prime Shoppers, Opp. Safal Square, University Road',
-            'contactNo': '+91 098792 29492',
-        }],
+    // }, {
+    //     'city': 'Navi Mumbai',
+    //     'lat': 19.0330,
+    //     'long': 73.0297,
+    //     'subCity': [{
+    //         'brand': 'img/brands/dockers.png',
+    //         'name': 'Location 1 Name',
+    //         'subCity': 'Vashi',
+    //         'url': 'Location 1 URL',
+    //         'address': 'Pranavanandji Marg, Sector 30A, Vashi',
+    //         'contactNo': '022 2781 0853'
+    //     }]
+    // }, {
+    //     'city': 'Thane',
+    //     'lat': 19.2183,
+    //     'long': 72.9781,
+    //     'subCity': [{
+    //         'brand': 'img/brands/umber.png',
+    //         'name': 'Location 1 Name',
+    //         'subCity': 'Mira Road',
+    //         'url': 'Location 1 URL',
+    //         'address': 'Shop 11, Oswal Orbit Shopping Center, Kanakia Junction, Chandan Shanti, Mira Road, Thane',
+    //         'contactNo': '+91 7506963733'
+    //     }, {
+    //         'brand': 'img/brands/ms-custom.png',
+    //         'name': 'Location 2 Name',
+    //         'subCity': 'Naupada',
+    //         'url': 'Location 2 URL',
+    //         'address': 'Shop 5, Saro Darshan Tower, Shivaji Path,  Talao Pali Junction, Near Kalyan Jewellers',
+    //         'contactNo': '+91 9820318541'
+    //     }],
+    // }, {
+    //     'city': 'Amravati',
+    //     'lat': 20.9374,
+    //     'long': 77.7796,
+    //     'subCity': [{
+    //         'brand': 'img/brands/ms-custom.png',
+    //         'name': 'Location 1 Name',
+    //         'subCity': 'Navathe Nagar',
+    //         'url': 'Location 1 URL',
+    //         'address': '444605, Badnera Rd, Vidhya Vihar Colony'
+    //     }],
+    // }, {
+    //     'city': 'Surat',
+    //     'lat': 21.1702,
+    //     'long': 72.8311,
+    //     'subCity': [{
+    //         'brand': 'img/brands/ms-custom.png',
+    //         'name': 'Location 1 Name',
+    //         'subCity': 'Vesu',
+    //         'url': 'Location 1 URL',
+    //         'address': 'G-22, Prime Shoppers, Opp. Safal Square, University Road',
+    //         'contactNo': '+91 098792 29492',
+    //     }],
 
-    }, {
-        'city': 'Ahmedabad',
-        'lat': 23.0225,
-        'long': 72.5714,
-        'subCity': [{
-            'brand': 'img/brands/ms-custom.png',
-            'name': 'Location 2 Name',
-            'subCity': 'Memnagar',
-            'url': 'Location 2 URL',
-            'address': '7, Sushilnagar society - Part 2, Manav Mandir, Drive-In-Road, Mayur Nagar Society, Sushil Nagar Society',
-            'contactNo': '+91 79 4892 3556'
-        }],
+    // }, {
+    //     'city': 'Ahmedabad',
+    //     'lat': 23.0225,
+    //     'long': 72.5714,
+    //     'subCity': [{
+    //         'brand': 'img/brands/ms-custom.png',
+    //         'name': 'Location 2 Name',
+    //         'subCity': 'Memnagar',
+    //         'url': 'Location 2 URL',
+    //         'address': '7, Sushilnagar society - Part 2, Manav Mandir, Drive-In-Road, Mayur Nagar Society, Sushil Nagar Society',
+    //         'contactNo': '+91 79 4892 3556'
+    //     }],
 
-    }];
+    // }];
 
     /* Start of map */
     $scope.showSlider = true;

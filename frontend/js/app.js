@@ -25,32 +25,32 @@ myApp.config(function ($stateProvider, $urlRouterProvider, $httpProvider, $locat
             templateUrl: tempateURL,
             controller: 'HomeCtrl'
         })
-         .state('about', {
+        .state('about', {
             url: "/about",
             templateUrl: tempateURL,
             controller: 'AboutCtrl'
         })
-          .state('franchise', {
+        .state('franchise', {
             url: "/franchise",
             templateUrl: tempateURL,
             controller: 'FranchiseCtrl'
         })
-            .state('gallery', {
+        .state('gallery', {
             url: "/gallery",
             templateUrl: tempateURL,
             controller: 'GalleryCtrl'
         })
-            .state('serve', {
+        .state('serve', {
             url: "/serve",
             templateUrl: tempateURL,
             controller: 'ServeCtrl'
         })
-           .state('blog', {
+        .state('blog', {
             url: "/blog",
             templateUrl: tempateURL,
             controller: 'BlogCtrl'
         })
-          .state('storelocator', {
+        .state('storelocator', {
             url: "/storelocator",
             templateUrl: tempateURL,
             controller: 'StorelocatorCtrl'
@@ -67,6 +67,22 @@ myApp.config(function ($stateProvider, $urlRouterProvider, $httpProvider, $locat
         });
     $urlRouterProvider.otherwise("/");
     $locationProvider.html5Mode(isproduction);
+});
+
+myApp.filter('serverimage', function () {
+    return function (image) {
+        if (image && image !== null) {
+            var imgarr = image.split("/")
+            //    console.log("imageserver",imgarr)
+            if (imgarr.length >= 2) {
+                return image;
+            } else {
+                return adminurl + "upload/readFile?file=" + image;
+            }
+        } else {
+            return undefined;
+        }
+    }
 });
 
 // For Language JS

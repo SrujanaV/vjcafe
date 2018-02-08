@@ -1,4 +1,4 @@
-myApp.factory('NavigationService', function () {
+myApp.factory('NavigationService', function ($http) {
     var navigation = [{
         name: "Home",
         classis: "active",
@@ -18,6 +18,34 @@ myApp.factory('NavigationService', function () {
     return {
         getNavigation: function () {
             return navigation;
+        },
+        getStoreLocator: function (callback) {
+            $http({
+                url: adminurl + 'StoreLocator/search',
+                method: 'POST',
+                withCredentials: false
+            }).then(callback);
+        },
+        getAllTestimonials: function (callback) {
+            $http({
+                url: adminurl + 'Tesimonial/search',
+                method: 'POST',
+                withCredentials: false
+            }).then(callback);
+        },
+        getAllSlides: function (callback) {
+            $http({
+                url: adminurl + 'Slider/search',
+                method: 'POST',
+                withCredentials: false
+            }).then(callback);
+        },
+        getAllGalleryImage: function (callback) {
+            $http({
+                url: adminurl + 'Gallery/search',
+                method: 'POST',
+                withCredentials: false
+            }).then(callback);
         },
     };
 });

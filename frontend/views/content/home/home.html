@@ -3,7 +3,7 @@
         <slides>
             <slide ng-repeat="s in mySlides">
                 <div class="home-opacity"> </div>
-                <img ng-src="{{s}}" class="img-full" noloading="true">
+                <img ng-src="{{s.backgroundImage | serverimage}}" class="img-full" noloading="true">
                 <div class="banner-one">
                     <div class="camera_caption">
                         <div>
@@ -21,6 +21,7 @@
         <next></next>
     </swiper>
 </section>
+
 <!-- 
 			=============================================
 				Timeline VJ Cafe
@@ -66,12 +67,13 @@
             </div>
             <!-- /.theme-section-title -->
             <div class="row">
-                <swiper id="client-slider" autoplay="5000" effect="slide" slides-per-view="3" slides-per-group="3" slide-to-clicked-slide="true" speed="1000">
+                <swiper id="client-slider" autoplay="5000" effect="slide" slides-per-view="3" slides-per-group="3" slide-to-clicked-slide="true"
+                    speed="1000">
                     <slides>
                         <slide class="item" ng-repeat="testimonial in testimonials track by $index">
                             <div class="client-text">
                                 <i class="fa fa-quote-left fa-4x icon" aria-hidden="true"></i>
-                                <p>{{testimonial.content}}</p>
+                                <div ng-bind-html="testimonial.description"></div>
                                 <h6>{{testimonial.name}} / <span class="country">{{testimonial.country}}</span></h6>
                             </div>
                             <!-- /.client-text -->
@@ -93,50 +95,53 @@
                     <h2>gallery</h2>
                     <p>Lorem Ipsum proin gravida nibh vel velit auctor aliquetenean sollicitudin </p>
                 </div>
-                
-                    <div class="swiper-container1">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide" style="background-image:url({{s}})" ng-repeat="s in homeSlide track by $index"></div>
-                        </div>
-                        <div class="swiper-button-prev hidden-sm hidden-xs"></div>
-                        <div class="swiper-button-next hidden-sm hidden-xs"></div>
-                        <!-- Add Pagination -->
-                        <div class="swiper-pagination"></div>
+
+                <div class="swiper-container1">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide" style="background-image:url({{s|serverimage}})" ng-repeat="s in homeSlide | orderBy:'$index':true"></div>
                     </div>
-               
+                    <div class="swiper-button-prev hidden-sm hidden-xs "></div>
+                    <div class="swiper-button-next hidden-sm hidden-xs "></div>
+                    <!-- Add Pagination -->
+                    <div class="swiper-pagination "></div>
+                </div>
+
             </div>
         </div>
     </div>
 </section>
-<section class="client-section">
-    <div class="opacity">
-        <div class="container">
-            <div class="theme-section-title text-center">
+<section class="client-section ">
+    <div class="opacity ">
+        <div class="container ">
+            <div class="theme-section-title text-center ">
                 <h2>social hub</h2>
             </div>
             <!-- /.theme-section-title -->
-            <div class="row">
-                <div class="col-md-6 col-sm-6 col-xs-12">
-                    <div class="small-socialicon">
-                      <img src="img/facebook-large.png" class="img-responsive">
+            <div class="row ">
+                <div class="col-md-6 col-sm-6 col-xs-12 ">
+                    <div class="small-socialicon ">
+                        <img src="img/facebook-large.png " class="img-responsive ">
                     </div>
-                    <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FTheVJCafe%2F&tabs=timeline&width=340&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId"
-                        width="340" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+                    <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FTheVJCafe%2F&tabs=timeline&width=340&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId "
+                        width="340 " height="500 " style="border:none;overflow:hidden " scrolling="no " frameborder="0
+                            " allowTransparency="true "></iframe>
                 </div>
-                <div class="col-md-6 col-sm-6 col-xs-12">
-                    <div class="small-socialicon">
-                         <img src="img/instragram-large.png" class="img-responsive">
-                    <!-- InstaWidget -->
-                    <!-- LightWidget WIDGET -->
-                    <!--<script src="//lightwidget.com/widgets/lightwidget.js"></script><iframe src="//lightwidget.com/widgets/1470ec460dda5240ae9e035450924e12.html" scrolling="no" allowtransparency="true" class="lightwidget-widget" style="border: 0; overflow: hidden;"  width="340" height="500"></iframe>-->
-                    <!-- LightWidget WIDGET -->
-                    <div class="instragram-section">
-                        <script src="//lightwidget.com/widgets/lightwidget.js"></script>
-                    <iframe src="//lightwidget.com/widgets/bb04def1cc2e5fda8740d8caa75db533.html"
-                        scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width: 100%; border: 0; overflow: hidden;"></iframe>
+                <div class="col-md-6 col-sm-6 col-xs-12 ">
+                    <div class="small-socialicon ">
+                        <img src="img/instragram-large.png " class="img-responsive ">
+                        <!-- InstaWidget -->
+                        <!-- LightWidget WIDGET -->
+                        <!--<script src="//lightwidget.com/widgets/lightwidget.js "></script><iframe src="//lightwidget.com/widgets/1470ec460dda5240ae9e035450924e12.html
+                            " scrolling="no " allowtransparency="true " class="lightwidget-widget " style="border: 0; overflow: hidden;
+                            "  width="340 " height="500 "></iframe>-->
+                        <!-- LightWidget WIDGET -->
+                        <div class="instragram-section ">
+                            <script src="//lightwidget.com/widgets/lightwidget.js "></script>
+                            <iframe src="//lightwidget.com/widgets/bb04def1cc2e5fda8740d8caa75db533.html " scrolling="no
+                            " allowtransparency="true " class="lightwidget-widget " style="width: 100%; border: 0; overflow: hidden; "></iframe>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
 </section>
