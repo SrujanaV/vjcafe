@@ -226,10 +226,13 @@ footer p {
 
 .j2 .jr2-text,
 .j3 .jr2-text {
-    width: 150px !important;
+    width: 115px !important;
     position: absolute;
     left: 0px;
     top: 30px;
+    p{
+        line-height: 20px;
+    }
 }
 
 .year-r {
