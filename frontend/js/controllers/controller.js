@@ -15,7 +15,11 @@ myApp.controller('HomeCtrl', function ($scope, TemplateService, NavigationServic
 
 
 })
-
+.controller('ComingSoonCtrl', function ($scope, TemplateService, NavigationService, $timeout, toastr, $http) {
+    $scope.template = TemplateService.getHTML("content/coming-soon.html");
+    TemplateService.title = "Coming-Soon"; // This is the Title of the Website
+    $scope.navigation = NavigationService.getNavigation();
+})
 .controller('LinksCtrl', function ($scope, TemplateService, NavigationService, $timeout, toastr, $http) {
     $scope.template = TemplateService.getHTML("content/links.html");
     TemplateService.title = "Links"; // This is the Title of the Website

@@ -7,6 +7,7 @@ $brand-danger: #fc483f !default;
 $brand-info: #000072 !default;
 $brand-orange:#ee7a2f;
 @import "../../bower_components/bootstrap-sass/assets/stylesheets/bootstrap";
+
 /* Bootstrap Variables Goes Here */
 
 @import "other/font-fix";
@@ -24,17 +25,25 @@ body {
     src: url("../fonts/OpenSans-Regular.ttf");
 }
 @font-face {
+    font-family: 'ImpactRegular';
+    src: url("../fonts/911Fonts.com_ImpactRegular__-_911fonts.com-fonts-4mSI.ttf");
+}
+
+@font-face {
     font-family: 'Playfair Display', serif;
     src: url("../fonts/PlayfairDisplay-Regular.ttf");
 }
+
 @font-face {
     font-family: 'Grand Hotel', cursive;
     src: url("../fonts/GrandHotel-Regular.ttf");
 }
+
 @font-face {
     font-family: 'Breetty';
     src: url("../fonts/Breetty Regular.otf");
 }
+
 a {
     display: inline-block;
 }
@@ -145,7 +154,6 @@ footer {
 // .flex-direction-nav {
 //     display: none;
 // }
-
 .content {
     min-height: 450px;
 }
@@ -194,7 +202,7 @@ header {
 }
 
 .color-orange {
-    color:$brand-orange;
+    color: $brand-orange;
 }
 
 .margin0,
@@ -230,7 +238,7 @@ footer p {
     position: absolute;
     left: 0px;
     top: 30px;
-    p{
+    p {
         line-height: 20px;
     }
 }
@@ -312,12 +320,12 @@ footer p {
 
 .client-text {
     margin: 0 8px;
-    p{
+    p {
         height: 150px;
         overflow: hidden;
         text-overflow: ellipsis;
     }
-    .country{
+    .country {
         font-size: 14px;
     }
 }
@@ -325,7 +333,7 @@ footer p {
 //end of timeline css
 //scss for swiper
 .small-socialicon img {
-   margin: 30px auto;
+    margin: 30px auto;
 }
 
 .home-opacity {
@@ -373,11 +381,12 @@ footer p {
     }
 }
 
-.title-subcity{
+.title-subcity {
     color: white;
     margin-bottom: 10px;
     font-weight: bold;
 }
+
 .flex-item-container {
     position: relative;
     @include align-items(center);
@@ -475,7 +484,7 @@ footer p {
             color: black;
             @include size(32px,
             45px);
-            &::before{
+            &::before {
                 color: white;
                 content: '\f104';
                 font: normal normal normal 14px/1 FontAwesome;
@@ -487,7 +496,7 @@ footer p {
             @include size(32px,
             45px);
             opacity: 1;
-            &::before{
+            &::before {
                 color: white;
                 content: '\f105';
                 font: normal normal normal 14px/1 FontAwesome;
@@ -523,7 +532,9 @@ footer p {
 .section-padd {
     padding: 15px 15px 15px 0;
 }
-.dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus {
+
+.dropdown-menu>li>a:hover,
+.dropdown-menu>li>a:focus {
     text-decoration: none;
     color: white !important;
     background: rgba(0, 0, 0, 0.7) !important;
@@ -616,9 +627,11 @@ footer p {
     padding: 40px 0;
     margin-bottom: 60px;
 }
-.blog-img{
-    height:240px;
+
+.blog-img {
+    height: 240px;
 }
+
 .blog-title {
     height: 50px;
     h4 {
@@ -682,3 +695,48 @@ footer p {
     width: 350px;
     margin: 0 auto;
 }
+
+//scss for comming-soon
+.comming-bg {
+    background: url("../img/comming-bg.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+}
+
+.comming-bottom {
+    position: absolute;
+    bottom: 10%;
+    right: 10%;
+    h2 {
+        color: white !important;
+        font-family: 'ImpactRegular';
+        letter-spacing: 2px;
+        margin-bottom: 25px;
+        font-size: 55px;
+        span {
+            color: #ee7a2f;
+        }
+    }
+}
+// .social-icon-comming{
+//   position: absolute;
+//   bottom:10%;
+//   left: 10%;
+// }
+.social-top {
+    padding-top: 30px;
+}
+
+// .comming-bottom{
+//     display: table;
+//     width: 100%;
+//     height: 100%;
+//     text-align: right;
+// }
+// .comming-cell{
+//     display: table-cell;
+//     vertical-align: bottom;
+// }
