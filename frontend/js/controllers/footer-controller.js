@@ -5,7 +5,6 @@ myApp.controller('footerCtrl', function ($scope, TemplateService) {
     });
        $scope.scrollTop = function()
     {
-        console.log("sssssssssssss",)
          $('html, body').animate({
         scrollTop: $('body,html').offset().top -100 
     }, 3000);
