@@ -729,5 +729,17 @@ footer p {
 //scss for serve page
 .serve-main{
 size: 20px;
-padding-top: 200px;
+padding-top: 50px;
+}
+.serve-card-content{
+    background-color: #130903;
+    margin-bottom: 30px;
+    padding: 10px;
+    p{
+        border-top: 1px dotted $brand-orange;
+        border-bottom: 1px dotted $brand-orange;
+        color: $brand-orange;
+        text-align: center;
+        font-weight: bold;
+    }
 }
