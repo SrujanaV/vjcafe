@@ -10,7 +10,8 @@ var myApp = angular.module('myApp', [
     'angular-flexslider',
     'ui.swiper',
     'angularPromiseButtons',
-    'toastr'
+    'toastr',
+    'wu.masonry'
 ]);
 
 // Define all the routes below
@@ -21,7 +22,7 @@ myApp.config(function ($stateProvider, $urlRouterProvider, $httpProvider, $locat
     $httpProvider.defaults.withCredentials = true;
     $stateProvider
         .state('home', {
-            url: "/home",
+            url: "/",
             templateUrl: tempateURL,
             controller: 'HomeCtrl'
         })
@@ -56,7 +57,7 @@ myApp.config(function ($stateProvider, $urlRouterProvider, $httpProvider, $locat
             controller: 'StorelocatorCtrl'
         })
           .state('coming-soon', {
-            url: "/",
+            url: "/coming-soon",
             templateUrl: tempateURL,
             controller: 'ComingSoonCtrl'
         })

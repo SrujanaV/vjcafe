@@ -1,0 +1,17 @@
+
+<div class="serve-main">
+    <div class="container">
+    <div class="row" masonry preserve-order >
+        <div class="col-md-3 col-sm-3 col-xs-6 masonry-brick" ng-repeat="brick in bricks track by $index">
+            <div class="serve-card">
+                <div class="serve-card-img">
+                    <img ng-src="{{brick}}" alt="A masonry brick" class="img-responsive">
+                </div>
+                <div class="serve-card-content">
+                    <p> {{$index}} - aaaaaaaaaaa</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
