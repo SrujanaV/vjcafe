@@ -1,0 +1,55 @@
+{
+    "title": "Edit WhatWeServe",
+    "name": "WhatWeServe",
+    "jsonPage": "viewWhatWeServe",
+    "desciption": "",
+    "pageType": "edit",
+    "urlFields": ["_id"],
+    "fields": [{
+        "name": "Title",
+        "type": "text",
+        "tableRef": "name",
+        "placeholder": "Enter title",
+        "id": "name",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    }, {
+        "name": "Image",
+        "type": "image",
+        "tableRef": "image",
+        "placeholder": "Enter  Image",
+        "id": "backgroundImage",
+        "size": "",
+        "option": "single",
+        "validation": ["", "trim", ""],
+        "view": true,
+        "url": ""
+    }],
+    "action": [{
+        "name": "submit",
+        "action": "submitWhatWeServe",
+        "stateName": {
+            "page": "page",
+            "json": {
+                "id": "viewWhatWeServe"
+            }
+        }
+    }, {
+        "name": "cancel",
+        "sideMenuRedirect": true,
+        "stateName": {
+            "page": "page",
+            "json": {
+                "id": "viewWhatWeServe"
+            }
+        }
+    }],
+    "apiCall": {
+        "url": "WhatWeServe/save",
+        "params": "_id"
+    },
+    "preApi": {
+        "url": "WhatWeServe/getOne",
+        "params": "_id"
+    }
+}

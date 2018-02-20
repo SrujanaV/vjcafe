@@ -47,5 +47,13 @@ myApp.factory('NavigationService', function ($http) {
                 withCredentials: false
             }).then(callback);
         },
+        getWhatWeServe: function (data, callback) {
+            $http({
+                url: adminurl + 'WhatWeServe/getWhatWeServe',
+                method: 'POST',
+                data: data,
+                withCredentials: false
+            }).then(callback);
+        }
     };
 });
