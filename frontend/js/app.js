@@ -11,7 +11,8 @@ var myApp = angular.module('myApp', [
     'ui.swiper',
     'angularPromiseButtons',
     'toastr',
-    'wu.masonry'
+    'wu.masonry',
+    'infinite-scroll'
 ]);
 
 // Define all the routes below
