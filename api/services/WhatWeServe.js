@@ -19,9 +19,18 @@ var model = {
      * @param {callback} callback function with err and response
      */
     getWhatWeServe: function (data, callback) {
-        console.log("getWhatWeServegetWhatWeServe", data);
-        WhatWeServe.find({}).limit(data.limit).skip(data.skip).exec(function (err, data) {
+        WhatWeServe.find({}).skip(data.skip).limit(data.limit).exec(function (err, whatWeServe) {
+            if (err) {
+                callback(err, null);
 
+            } else {
+                if (!_.isEmpty(whatWeServe)) {
+
+                    callback(null, whatWeServe);
+                } else {
+                    callback(null, []);
+                }
+            }
         })
     }
 };
