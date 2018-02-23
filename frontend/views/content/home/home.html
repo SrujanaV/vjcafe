@@ -1,5 +1,5 @@
 <section>
-    <swiper autoplay="5000" effect="slide" slides-per-view="1" loop="true">
+    <swiper autoplay="3000" effect="slide" slides-per-view="1" loop="true">
         <slides>
             <slide ng-repeat="s in mySlides">
                 <div class="home-opacity"> </div>
@@ -8,9 +8,9 @@
                     <div class="camera_caption">
                         <div>
                             <div class="text-center">
-                                <h3 class="wow fadeInUp  p-color">Super Crispy</h3>
-                                <h1 class="wow fadeInUp" data-wow-delay="0.2s">Super delicious cake</h1>
-                                <p class="wow fadeInUp" data-wow-delay="0.4s">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed tincidunt</p>
+                                <!-- <h3 class="wow fadeInUp  p-color">Super Crispy</h3> -->
+                                <h1 class="wow fadeInUp" data-wow-delay="0.2s">{{s.name}}</h1>
+                                <!-- <p class="wow fadeInUp" data-wow-delay="0.4s">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed tincidunt</p> -->
                             </div>
                         </div>
                     </div>
@@ -63,7 +63,7 @@
         <div class="container">
             <div class="theme-section-title text-center">
                 <h2>Testimonials</h2>
-                <p>Lorem Ipsum proin gravida nibh vel velit auctor aliquetenean sollicitudin </p>
+                <!-- <p>Lorem Ipsum proin gravida nibh vel velit auctor aliquetenean sollicitudin </p> -->
             </div>
             <!-- /.theme-section-title -->
             <div class="row">
@@ -74,7 +74,7 @@
                             <div class="client-text">
                                 <i class="fa fa-quote-left fa-4x icon" aria-hidden="true"></i>
                                 <div ng-bind-html="testimonial.description"></div>
-                                <h6>{{testimonial.name}} / <span class="country">{{testimonial.country}}</span></h6>
+                                <h6>{{testimonial.name}} / <span class="country">India</span></h6>
                             </div>
                             <!-- /.client-text -->
                         </slide>
@@ -93,7 +93,7 @@
             <div class="row">
                 <div class="theme-section-title text-center">
                     <h2>gallery</h2>
-                    <p>Lorem Ipsum proin gravida nibh vel velit auctor aliquetenean sollicitudin </p>
+                    <p>Our Items</p>
                 </div>
 
                 <div class="swiper-container1">
