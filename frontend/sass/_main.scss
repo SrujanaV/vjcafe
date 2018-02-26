@@ -24,6 +24,7 @@ body {
     font-family: 'Open Sans', sans-serif;
     src: url("../fonts/OpenSans-Regular.ttf");
 }
+
 @font-face {
     font-family: 'ImpactRegular';
     src: url("../fonts/911Fonts.com_ImpactRegular__-_911fonts.com-fonts-4mSI.ttf");
@@ -590,14 +591,21 @@ footer p {
     font-weight: 300;
 }
 
+.franchise-section-title h3 {
+    margin: 15px 0;
+}
+
 .franchise-list {
     list-style-type: disc;
     font-weight: 300;
     margin-left: 20px;
-}
+    line-height: 30px;
+}   
 
 .franchise-form {
     color: white;
+    background: rgba(21, 19, 19, 0.77);
+    padding: 30px 0;
     h3 {
         color: white;
         margin-top: 20px;
@@ -727,11 +735,12 @@ footer p {
 }
 
 //scss for serve page
-.serve-main{
-size: 20px;
-padding-top: 50px;
+.serve-main {
+    size: 20px;
+    padding-top: 50px;
 }
-.serve-card-content{
+
+.serve-card-content {
     // background-color: #130903;
     margin-bottom: 30px;
     // padding: 10px;
