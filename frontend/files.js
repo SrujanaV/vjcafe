@@ -32,6 +32,7 @@ module.exports = [
   "bower_components/outlayer/item.js",
   "bower_components/outlayer/outlayer.js",
   "bower_components/masonry/masonry.js",
+  "bower_components/angular-loading-bar/build/loading-bar.js",
   "bower_components/imagesloaded/imagesloaded.js",
   "bower_components/masonry/dist/masonry.pkgd.min.js",
   "bower_components/angular-masonry/angular-masonry.js",
