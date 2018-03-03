@@ -23,7 +23,7 @@ myApp.config(function ($stateProvider, $urlRouterProvider, $httpProvider, $locat
     cfpLoadingBarProvider.includeSpinner = true;
     cfpLoadingBarProvider.includeBar = true;
     // cfpLoadingBarProvider.parentSelector = '#loading-bar-container';
-    cfpLoadingBarProvider.spinnerTemplate = '<div class="spinner-overlay"><img class="spinner" src="frontend/img/fancybox_loading.gif"/></div>';
+    cfpLoadingBarProvider.spinnerTemplate = '<div class="spinner-overlay"><img class="spinner" src="frontend/img/loader.gif"/></div>';
     //End of loader
     // for http request with session
     $httpProvider.defaults.withCredentials = true;

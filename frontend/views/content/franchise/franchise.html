@@ -18,13 +18,13 @@
 				we provide all inclusive support with the product and we would be happy to speak to qualified individuals who share our
 				vision </p>
 			<h3 class="text-center color-orange">An ideal Operator should have the following:
-</h3>
+			</h3>
 			<ul class="franchise-list text-center list-unstyled">
 				<li>High passion for food</li>
 				<li>Should have business acumen</li>
 				<li>Strong understanding in executing Four-Walls and local store marketing</li>
 				<li>Should have an investment capacity of around 18 lakhs min.</li>
-				<li> Unit franchise : should have their own property or a rented one of around 250 sq ft. near a college or school. </li>	
+				<li> Unit franchise : should have their own property or a rented one of around 250 sq ft. near a college or school. </li>
 			</ul>
 		</div>
 	</div>
@@ -37,24 +37,28 @@
 				<p class="text-center">Parties looking to grow with us are requested to fill in the franchise application form below- </p>
 				<p class="text-center"></p>
 				<div class="screen-reader-response"></div>
-				<form class="form-inline" action="/action_page.php">
+				<form class="form-inline" name="franchises">
+					<div class="form-group">
+						<label for="name">Name:</label>
+						<input type="text" class="form-control" id="name" name="name" ng-model="formdata.name" required>
+						<span ng-show="franchises.name.$touched && franchises.name.$invalid">Please enter a valid name</span>
+					</div>
 					<div class="form-group">
 						<label for="email">Email:</label>
-						<input type="email" class="form-control" id="email" name="email">
+						<input type="email" class="form-control" id="email" name="email" ng-model="formdata.email" required>
+						<span ng-show="franchises.email.$touched && franchises.email.$invalid">Please enter a valid email</span>
 					</div>
 					<div class="form-group">
-						<label for="pwd">Password:</label>
-						<input type="password" class="form-control" id="pwd" name="pwd">
-					</div>
-					<div class="form-group">
-						<label for="Purpose">Purpose:</label>
-						<input type="text" class="form-control" id="Purpose" name="Purpose">
+						<label for="location">Location (City) :</label>
+						<input type="text" class="form-control" id="location" name="location" ng-model="formdata.location" required>
+						<span ng-show="franchises.location.$touched && franchises.location.$invalid">Please enter a location</span>
 					</div>
 					<div class="form-group">
 						<label for="phone"> Ph.No :</label>
-						<input type="number" class="form-control" id="phone" name="phone">
+						<input type="number" class="form-control" id="phone" name="phone" ng-model="formdata.phNo" required>
+						<span ng-show="franchises.phone.$touched && franchises.phone.$invalid">Please enter a location</span>
 					</div>
-					<div class="text-center"> <a class="wow fadeInLeft  banner-button p-bg-color submit-button tran3s" data-wow-delay="0.6s">submit</a></div>
+					<div class="text-center"> <a class="wow fadeInLeft  banner-button p-bg-color submit-button tran3s" data-wow-delay="0.6s" ng-click="franchiseSubmit(formdata)">submit</a></div>
 				</form>
 				<p style="font-weight: 400; text-align: center;">FOR ALL FRANCHISE-RELATED ENQUIRIES, PLEASE CONTACT : </p>
 				<p style="text-align: center;">Franchise Manager (Ankit Shah) - 8779609658</p>

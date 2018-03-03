@@ -54,6 +54,14 @@ myApp.factory('NavigationService', function ($http) {
                 data: data,
                 withCredentials: false
             }).then(callback);
+        },
+         saveFranchise: function (data, callback) {
+            $http({
+                url: adminurl + 'Franchise/save',
+                method: 'POST',
+                data: data,
+                withCredentials: false
+            }).then(callback);
         }
     };
 });

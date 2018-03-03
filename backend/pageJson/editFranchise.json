@@ -1,0 +1,68 @@
+{
+    "title": "Edit Franchise",
+    "name": "Franchise",
+    "jsonPage": "viewFranchise",
+    "desciption": "",
+    "pageType": "edit",
+    "urlFields": ["_id"],
+    "fields": [{
+        "name": "Name",
+        "type": "text",
+        "tableRef": "name",
+        "placeholder": "Enter Franchise Name",
+        "id": "name",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    },{
+        "name": "Email",
+        "type": "text",
+        "tableRef": "email",
+        "placeholder": "Enter Franchise email",
+        "id": "email",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    },{
+        "name": "Location",
+        "type": "text",
+        "tableRef": "location",
+        "placeholder": "Enter Franchise location",
+        "id": "location",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    },{
+        "name": "Phone No",
+        "type": "text",
+        "tableRef": "phNo",
+        "placeholder": "Enter Franchise Phone no",
+        "id": "phNo",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    }],
+    "action": [{
+        "name": "submit",
+        "action": "submitFranchise",
+        "stateName": {
+            "page": "page",
+            "json": {
+                "id": "viewFranchise"
+            }
+        }
+    }, {
+        "name": "cancel",
+        "sideMenuRedirect": true,
+        "stateName": {
+            "page": "page",
+            "json": {
+                "id": "viewFranchise"
+            }
+        }
+    }],
+    "apiCall": {
+        "url": "Franchise/save",
+        "params": "_id"
+    },
+    "preApi": {
+        "url": "Franchise/getOne",
+        "params": "_id"
+    }
+}

@@ -39,6 +39,12 @@ myApp.factory('NavigationService', function ($http) {
             classis: "active",
             sref: "#!/page/viewStoreLocator//",
             icon: "phone"
+        },
+          {
+            name: "Franchise",
+            classis: "active",
+            sref: "#!/page/viewFranchise//",
+            icon: "phone"
         }
     ];
 

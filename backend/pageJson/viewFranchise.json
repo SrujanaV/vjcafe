@@ -1,0 +1,57 @@
+{
+    "title": "Franchise",
+    "description": "List of Franchise",
+    "pageType": "view",
+    "sendIdWithCreate": true,
+    "urlFields": ["_id"],
+    "fields": [{
+        "name": "Name",
+        "isSort": "",
+        "tableRef": "name"
+    },{
+        "name": "Email",
+        "isSort": "",
+        "tableRef": "email"
+    },{
+        "name": "Location",
+        "isSort": "",
+        "tableRef": "location"
+    },{
+        "name": "Phone No",
+        "isSort": "",
+        "tableRef": "phNo"
+    } ],
+    "action": [{
+        "name": "edit",
+        "icon": "fa-pencil",
+        "buttonClass": "btn-primary",
+        "type": "page",
+        "action": "editFranchise",
+        "fieldsToSend": {
+            "_id": "_id"
+        }
+    }, {
+        "name": "delete",
+        "icon": "fa-trash",
+        "buttonClass": "btn-danger",
+        "type": "apiCallConfirm",
+        "title": "Delete Franchise",
+        "content": "Are you sure you want to delete Franchise?",
+        "api": "Franchise/delete",
+        "fieldsToSend": {
+            "name": "_id",
+            "value": "_id"
+        }
+    }],
+    "button": [{
+        "name": "Create",
+        "icon": "plus",
+        "class": "btn-success",
+        "type": "page",
+        "action": "createFranchise"
+    }],
+    "apiCall": {
+        "url": "Franchise/search",
+        "params": "_id"
+    }
+}
