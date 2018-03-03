@@ -324,7 +324,11 @@ footer p {
     p {
         height: 150px;
         overflow: hidden;
-        text-overflow: ellipsis;
+        overflow-y: scroll;
+         ::-webkit-scrollbar {
+            display: none;
+        }
+        /* text-overflow: ellipsis; */
     }
     .country {
         font-size: 14px;
@@ -366,11 +370,13 @@ footer p {
     }
     .swiper-button-prev {
         background: url("../img/home/previous-home.png");
+        background-repeat: no-repeat;
         width: 60px;
         height: 60px
     }
     .swiper-button-next {
         background: url("../img/home/next-home.png");
+        background-repeat: no-repeat;
         width: 60px;
         height: 60px
     }
@@ -780,4 +786,11 @@ footer p {
 
 .franchise-madal {
     position: relative;
+}
+
+.swiper-button-next,
+.swiper-button-prev,
+.swiper-container-rtl .swiper-button-prev,
+.swiper-container-rtl .swiper-button-next {
+    fill: red;
 }
