@@ -26,7 +26,7 @@ module.exports = {
    ***************************************************************************/
 
   port: 90,
-  realHost: "http://thevjcafe.com",
+  realHost: "http://www.thevjcafe.com",
   emails: ["chintan@wohlig.com", "jagruti@wohlig.com", "tushar@wohlig.com", "chirag@wohlig.com", "harsh@wohlig.com", "prajakta.kamble@wohlig.com", "srujana.vemula@wohlig.com", "snehal.thakare@wohlig.com"]
 
   /***************************************************************************
