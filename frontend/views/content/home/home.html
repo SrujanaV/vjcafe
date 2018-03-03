@@ -73,7 +73,7 @@
                         <slide class="item" ng-repeat="testimonial in testimonials track by $index">
                             <div class="client-text">
                                 <i class="fa fa-quote-left fa-4x icon" aria-hidden="true"></i>
-                                <div ng-bind-html="testimonial.description"></div>
+                                <div ng-bind-html="testimonial.description" class="client-scroll"></div>
                                 <h6>{{testimonial.name}} / <span class="country">India</span></h6>
                             </div>
                             <!-- /.client-text -->

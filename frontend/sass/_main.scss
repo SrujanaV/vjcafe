@@ -324,11 +324,17 @@ footer p {
     p {
         height: 150px;
         overflow: hidden;
-        overflow-y: scroll;
-         ::-webkit-scrollbar {
-            display: none;
+        overflow-y: auto;
+         &::-webkit-scrollbar {
+            width: 0px;
+            background: transparent;
+            /* optional: just make scrollbar invisible */
         }
-        /* text-overflow: ellipsis; */
+        /* optional: show position indicator in red */
+        &::-webkit-scrollbar-thumb {
+            background: transparent;
+        }
+       
     }
     .country {
         font-size: 14px;
