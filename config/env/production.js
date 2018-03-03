@@ -25,7 +25,7 @@ module.exports = {
    * Set the port in the production environment to 80                        *
    ***************************************************************************/
 
-  port: 86,
+  port: 87,
   realHost: "http://thevjcafe.com",
   emails: ["chintan@wohlig.com", "jagruti@wohlig.com", "tushar@wohlig.com", "chirag@wohlig.com", "harsh@wohlig.com", "prajakta.kamble@wohlig.com", "srujana.vemula@wohlig.com", "snehal.thakare@wohlig.com"]
 

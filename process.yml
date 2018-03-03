@@ -1,6 +1,6 @@
 apps:
   - script: "app.js"
-    name: "vjcafe - 86"
+    name: "vjcafe - 87"
     watch: false
     args: "--prod"
     exec_mode: "cluster"
