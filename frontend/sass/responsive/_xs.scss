@@ -17,7 +17,19 @@
      }
      //end of header
      //scss for home
-       .gallery-bg .swiper-button-prev,.gallery-bg .swiper-button-next,{
+     .client-section .client-text .icon{
+             font-size: 25px;
+     }
+     .gallery-bg {
+         margin: 30px 0 40px 0;
+     }
+     .j2,
+     .j3 {
+         min-height: 140px;
+     }
+     .gallery-bg .swiper-button-prev,
+     .gallery-bg .swiper-button-next,
+     {
          display: none !important;
      }
      .home-swiper {
@@ -58,6 +70,11 @@
      //scss for about us
      .d-flex {
          display: block;
+     }
+     .our-team {
+         h3 {
+             text-align: center;
+         }
      }
      //Start of storelocator
      .map-section {
