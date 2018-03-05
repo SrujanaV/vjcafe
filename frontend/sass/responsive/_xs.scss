@@ -17,6 +17,12 @@
      }
      //end of header
      //scss for home
+     .widget-fb{
+         .instragram-section,iframe{
+        width:250px !important;
+     }}
+    
+     
      .client-section .client-text .icon{
              font-size: 25px;
      }
@@ -27,6 +33,10 @@
      .j3 {
          min-height: 140px;
      }
+     .j2 .jr2-text p, .j3 .jr2-text p {
+        line-height: 16px;
+        font-size: 12px;
+    }
      .gallery-bg .swiper-button-prev,
      .gallery-bg .swiper-button-next,
      {
@@ -48,6 +58,23 @@
      h1 {
          font-size: 30px;
      }
+     .client-section .client-text {
+        padding: 20px 25px 50px 20px;
+    }
+    .client-section .client-text p {
+        font-size: 12px;
+        margin: 15px 0 15px 0;
+        line-height: 18px;
+    }
+    .client-text {
+        h6 {
+            font-size: 12px;
+            height: 30px;
+        }
+    }
+    .client-section .client-text .icon {
+        font-size: 25px;
+    }
      .gallery-bg {
          overflow: hidden;
      }
@@ -134,4 +161,5 @@
              font-size: 25px;
          }
      }
+
  }

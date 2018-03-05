@@ -382,14 +382,16 @@ display: none;
     .swiper-button-prev {
         background: url("../img/home/previous-home.png");
         background-repeat: no-repeat;
+        background-position: left;
         width: 60px;
-        height: 60px
+        height: 60px;
     }
     .swiper-button-next {
         background: url("../img/home/next-home.png");
         background-repeat: no-repeat;
         width: 60px;
-        height: 60px
+        height: 60px;
+        background-position: right;
     }
     .swiper-button-next,
     .swiper-container-rtl .swiper-button-prev,
@@ -810,6 +812,12 @@ display: none;
 .camera_caption{
 h1{
 font-family: 'Playfair Display', serif;
-font-size: 55px;
 }
+}
+
+//scss for all pages
+.theme-inner-banner{
+    h1{
+        font-family: 'Playfair Display', serif;
+    }
 }
