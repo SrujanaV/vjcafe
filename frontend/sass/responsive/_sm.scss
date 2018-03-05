@@ -10,13 +10,22 @@
      }
      .menu-inner-logo {
          display: none !important;
-     }  
-       .mobile-header a img {
+     }
+     .mobile-header a img {
          width: 150px;
          padding: 0 20px;
      }
      //end of header
      //scss for home
+     .home-swiper {
+         .swiper-button-prev,
+         .swiper-button-next {
+             display: none;
+         }
+     }
+    //  .gallery-bg .swiper-button-prev,.gallery-bg .swiper-button-next{
+    //      display: none !important;
+    //  }
      .gallery-bg {
          overflow: hidden;
      }
@@ -28,42 +37,42 @@
      .j3 .jr2-img {
          right: 100px;
      }
-      //Start of Store locator.html
-      .store-locator {
-        .flex-item-container {
-            position: relative;
-            @include align-items(initial);
-            @include flex-direction(column);
-        }
-    }
-    .row-margin {
-        margin-bottom: 15px;
-        margin-top: 15px;
-    }
-    .map-section {
-        width: 100%;
-        @include margin(15px);
-    }
-    .custom-slider {
-        @include margin(0 15px);
-        .location-title {
-            padding-left: 15px;
-            padding-right: 15px;
-        }
-        .section-padd{
-            padding: 15px;
-        }
-        .flexslider {
-            margin: 0 15px 0 15px;
-            .flex-prev {
-                left: -22px!important;
-            }
-            .flex-next {
-                right: -22px!important;
-            }
-        }
-    }
-    //end of store-locator
+     //Start of Store locator.html
+     .store-locator {
+         .flex-item-container {
+             position: relative;
+             @include align-items(initial);
+             @include flex-direction(column);
+         }
+     }
+     .row-margin {
+         margin-bottom: 15px;
+         margin-top: 15px;
+     }
+     .map-section {
+         width: 100%;
+         @include margin(15px);
+     }
+     .custom-slider {
+         @include margin(0 15px);
+         .location-title {
+             padding-left: 15px;
+             padding-right: 15px;
+         }
+         .section-padd {
+             padding: 15px;
+         }
+         .flexslider {
+             margin: 0 15px 0 15px;
+             .flex-prev {
+                 left: -22px!important;
+             }
+             .flex-next {
+                 right: -22px!important;
+             }
+         }
+     }
+     //end of store-locator
      //for footer
      .footer-list-widget .social-name {
          font-size: 12px;
@@ -80,8 +89,12 @@
          width: 135px;
      }
      //scss for comming -soon
-      .social-icon-comming{
-         left:82%;
+     .social-icon-comming {
+         left: 82%;
          bottom: 8%;
+     }
+      //scss for about us
+     .d-flex {
+         display: block;
      }
  }

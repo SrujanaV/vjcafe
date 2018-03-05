@@ -220,6 +220,7 @@ footer p {
 .jr-title {
     h1 {
         font-size: 36px;
+        font-family: 'Playfair Display', serif;
     }
 }
 
@@ -346,7 +347,11 @@ footer p {
 .small-socialicon img {
     margin: 30px auto;
 }
-
+.home-swiper{
+.swiper-button-prev ,.swiper-button-next {
+display: none;
+}
+}
 .home-opacity {
     position: absolute;
     background: rgba(0, 0, 0, 0.8);
@@ -799,4 +804,12 @@ footer p {
 .swiper-container-rtl .swiper-button-prev,
 .swiper-container-rtl .swiper-button-next {
     fill: red;
+}
+
+//home page scss
+.camera_caption{
+h1{
+font-family: 'Playfair Display', serif;
+font-size: 55px;
+}
 }

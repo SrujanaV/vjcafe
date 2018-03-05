@@ -17,12 +17,21 @@
      }
      //end of header
      //scss for home
+       .gallery-bg .swiper-button-prev,.gallery-bg .swiper-button-next,{
+         display: none !important;
+     }
+     .home-swiper {
+         .swiper-button-prev,
+         .swiper-button-next {
+             display: none;
+         }
+     }
      .banner-one p {
          padding: 0px 0 45px 0;
      }
      .banner-one h3 {
          margin: 70px 0 0 0;
-         font-size:20px;
+         font-size: 20px;
      }
      h1 {
          font-size: 30px;
@@ -46,37 +55,41 @@
          right: 0px;
          width: 150px;
      }
+     //scss for about us
+     .d-flex {
+         display: block;
+     }
      //Start of storelocator
-     .map-section{
+     .map-section {
          margin: 15px;
      }
      .custom-slider {
-        @include padding(15px);
-        margin-left: 0;
-        .location-name {
-            @include margin(15px 10px);
-        }
-        .flexslider {
-            padding-top: 0;
-            padding-bottom: 0;
-            .flex-prev {
-                left: -30px !important;
-            }
-            .flex-next {
-                right: -30px !important;
-            }
-        }
-    }
-    .store-location-brands-dtl {
-        width: auto;
-        height: auto;
-    }
-    .store-location-dtl {
-        @include padding(0 15px);
-        .email {
-            word-wrap: break-word;
-        }
-    } //End of store locator
+         @include padding(15px);
+         margin-left: 0;
+         .location-name {
+             @include margin(15px 10px);
+         }
+         .flexslider {
+             padding-top: 0;
+             padding-bottom: 0;
+             .flex-prev {
+                 left: -30px !important;
+             }
+             .flex-next {
+                 right: -30px !important;
+             }
+         }
+     }
+     .store-location-brands-dtl {
+         width: auto;
+         height: auto;
+     }
+     .store-location-dtl {
+         @include padding(0 15px);
+         .email {
+             word-wrap: break-word;
+         }
+     } //End of store locator
      //scss for footer
      .quick-link {
          padding: 0 0px 0 0px;
@@ -92,15 +105,15 @@
          width: 135px;
      }
      //scss for commig-soon page
-     .logo-comming img{
-                 width: 200px;
+     .logo-comming img {
+         width: 200px;
      }
-     .social-icon-comming{
-         left:75%;
+     .social-icon-comming {
+         left: 75%;
          bottom: 8%;
      }
-     .comming-bottom{
-         h2{
+     .comming-bottom {
+         h2 {
              font-size: 25px;
          }
      }
